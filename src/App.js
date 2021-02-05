@@ -4,6 +4,8 @@ import {Context} from './context/Context'
 import Navbar from './components/pages/Navbar'
 import Home from './components/pages/Home'
 import Contact from './components/pages/Contact'
+import Manager from './components/pages/manager/Manager'
+import Employee from './components/pages/employee/Employee'
 
 const App = () => {
   const context = useContext(Context)
@@ -14,8 +16,9 @@ const App = () => {
     <main>
       <Navbar/>
       <Switch>
-        <Route exact path="/" render={() => <Home />} />
-        <Route path="/contact" render={() => <Contact />} />
+      <Route exact path="/" component={Home}/>
+        <Route path="/manager" component={Manager} />
+        <Route path="/employee" component={Employee} />
       </Switch>
     </main>
   )
