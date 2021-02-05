@@ -12,6 +12,8 @@ const App = () => {
   return(
 
     <main>
+      <button onClick={()=>context.setIsAdmin(false)}>Employee</button>
+    <button onClick={()=>context.setIsAdmin(true)}>Manager</button>
       <Navbar/>
       <Switch>
         <Route exact path="/" render={() => <Home />} />

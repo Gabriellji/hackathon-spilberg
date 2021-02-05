@@ -14,18 +14,18 @@ const Burger = styled.button`
   height: ${theme.navbar.height};
   width: ${theme.navbar.height};
   background-color: blue;
-  /* display:block;
+  display:block;
   @media (min-width: 768px) {
     display:none
-  } */
+  }
 `;
 const StyledNavbar = styled.div`
   height: ${theme.navbar.height};
   background-color: green;
-  /* display: none;
+  display: none;
   @media (min-width: 768px) {
     display:block
-  } */
+  }
 `;
 const StyledModal = styled.div`
   background-color: yellow;
