@@ -13,7 +13,7 @@ export const user = [
     username: "user" /* string */,
     password: "user" /* string */,
     name: "Naomi Carey" /* string */,
-    position: "" /* string */,
+    position: "worker" /* string */,
     ideas: [
       /* put array of ideas here */
       {
@@ -32,7 +32,7 @@ export const user = [
     username: "Peppe" /* string */,
     password: "user" /* string */,
     name: "Anna Salo" /* string */,
-    position: "" /* string */,
+    position: "developer" /* string */,
     ideas: [
       /* put array of ideas here */
       {
@@ -51,7 +51,7 @@ export const user = [
     username: "Bear" /* string */,
     password: "user" /* string */,
     name: "Yahoo Karlos" /* string */,
-    position: "" /* string */,
+    position: "cleaner" /* string */,
     ideas: [
       /* put array of ideas here */
       {
@@ -70,7 +70,7 @@ export const user = [
     username: "Bonito" /* string */,
     password: "user" /* string */,
     name: "Chowauwa" /* string */,
-    position: "" /* string */,
+    position: "cooker" /* string */,
     ideas: [
       /* put array of ideas here */
       {
@@ -89,7 +89,7 @@ export const user = [
     username: "Mary" /* string */,
     password: "user" /* string */,
     name: "Marry Poppins" /* string */,
-    position: "" /* string */,
+    position: "model" /* string */,
     ideas: [
       /* put array of ideas here */
       {
@@ -108,7 +108,7 @@ export const user = [
     username: "Silvester" /* string */,
     password: "user" /* string */,
     name: "Silvester Stallone" /* string */,
-    position: "" /* string */,
+    position: "writer" /* string */,
     ideas: [
       /* put array of ideas here */
       {
