@@ -12,6 +12,10 @@ export const StyledTopBtn = styled.button`
     background-color: none;
     cursor: pointer;
     transition: all 500ms;
+    width: ${(p) => 
+        p.width === "full"
+            ? "100%"
+            : "auto"};
 
     &:hover {
         background-color: ${theme.color.yellow};
@@ -20,8 +24,8 @@ export const StyledTopBtn = styled.button`
     }
 `;
 
-const TopBtn = ({ action, text }) => (
-    <StyledTopBtn onClick={action}>{text}</StyledTopBtn>
+const TopBtn = ({ action, text, width }) => (
+    <StyledTopBtn {...[width]} width={width} onClick={action}>{text}</StyledTopBtn>
 )
 
 export default TopBtn;

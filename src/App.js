@@ -31,7 +31,6 @@ const StyledTopBtnsSection = styled.div`
     flex-direction: row;
     justify-content: center;
   }
-  
 `;
 
 const App = (props) => {
