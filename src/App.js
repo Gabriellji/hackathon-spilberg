@@ -1,24 +1,28 @@
-import React, {useContext, useEffect} from 'react'
+import React, {useContext, useEffect, useState} from 'react'
 import {Switch, Route} from 'react-router-dom'
 import {Context} from './context/Context'
-import Navbar from './components/pages/Navbar'
 import Home from './components/pages/Home'
-import Contact from './components/pages/Contact'
-import Manager from './components/pages/manager/Manager'
-import Employee from './components/pages/employee/Employee'
+import Navbar from './components/Navbar/Navbar'
 
 const App = () => {
   const context = useContext(Context)
-
-  useEffect(()=>{console.log("placeholder")},[])
+  const [open, setOpen] = useState(false);
 
   return(
+
     <main>
+      <button onClick={()=>context.setIsAdmin(false)}>Employee</button>
+    <button onClick={()=>context.setIsAdmin(true)}>Manager</button>
       <Navbar/>
       <Switch>
-      <Route exact path="/" component={Home}/>
-        <Route path="/manager" component={Manager} />
-        <Route path="/employee" component={Employee} />
+        <Route exact path="/" render={() => <Home />} />
+        <Route path="/user/wall" render={() => <Home />} />
+        <Route path="/user/swipe" render={() => <Home />} />
+        <Route path="/user/myideas" render={() => <Home />} />
+        <Route path="/user/newidea" render={() => <Home />} />
+        <Route path="/manager/wall" render={() => <Home />} />
+        <Route path="/manager/userprofile" render={() => <Home />} />
+        <Route path="/manager/favourites" render={() => <Home />} />
       </Switch>
     </main>
   )
