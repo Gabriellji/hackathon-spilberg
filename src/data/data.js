@@ -28,7 +28,34 @@ export const user = [
         question3:
           " when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more ",
         totalLikes: [
-          /* likes other users gave. i want an array of name of users liking the comment  */
+          "1", "naomi", "boss"
+        ],
+        created: "22/01/2021",
+      },
+      {
+        id: uuidv4() /* uuidv */,
+        title: "No more long meetings",
+        question1:
+          "is simply dummy text of the printing and typesetting industry. ",
+        question2:
+          "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        question3:
+          " when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more ",
+        totalLikes: [
+          "1", "naomi", "boss", "myself"
+        ],
+        created: "22/01/2021",
+      },
+      {
+        id: uuidv4() /* uuidv */,
+        title: "Please let me work more",
+        question1:
+          "is simply dummy text of the printing and typesetting industry. ",
+        question2:
+          "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        question3:
+          " when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more ",
+        totalLikes: [
         ],
         created: "22/01/2021",
       },
@@ -95,7 +122,7 @@ export const user = [
           "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
         question3:
           " when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more ",
-        totalLikes: [
+        totalLikes: [ "noone"
         ],
         created: "22/01/2021",
       },
