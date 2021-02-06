@@ -6,7 +6,7 @@ import Home from "./components/pages/Home";
 import Contact from "./components/pages/Contact";
 import Manager from "./components/pages/manager/Manager";
 import Employee from "./components/pages/employee/Employee";
-import PeerIdea from "./components/pages/PeerIdea";
+import PeerIdea from "./components/pages/employee/PeerIdea";
 
 const App = () => {
   const context = useContext(Context);
