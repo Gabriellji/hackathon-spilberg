@@ -19,6 +19,7 @@ const StyledModal = styled.div`
   transition: transform 500ms;
   transform: translateX(-100%);
   transform: ${({ modalOpen }) => modalOpen ? 'translateX(0)' : 'translateX(-100%)'};
+  z-index: 2;
   
   @media (max-width: 375px) {
     width: 100%;
