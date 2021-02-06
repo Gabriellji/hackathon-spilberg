@@ -1,13 +1,9 @@
-.employee_wrap 
 
 .employee-inner_wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-
-
 
 
 .ReactModal__Overlay {
