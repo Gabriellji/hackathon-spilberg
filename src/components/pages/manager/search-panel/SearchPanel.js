@@ -15,6 +15,7 @@ const StyledSearchPanel = styled.div`
     border-radius: 10px;
     line-height: 32px;
     padding: 4px;
+    background-color: ${theme.color.grey};
   }
 
   @media (min-width: 376px){

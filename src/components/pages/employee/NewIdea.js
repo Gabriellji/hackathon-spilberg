@@ -54,6 +54,7 @@ const IdeaQuestions = styled.form`
       line-height: 32px;
       padding: 4px;
       resize: vertical;
+      background-color: ${theme.color.grey};
     }
   }
 `;

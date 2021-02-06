@@ -9,7 +9,7 @@ export const StyledTopBtn = styled.button`
     color: ${theme.color.orange};
     border: 2px solid ${theme.color.orange};
     border-radius: 9999px;
-    background-color: none;
+    background-color: ${theme.color.grey};
     cursor: pointer;
     transition: all 500ms;
     width: ${(p) => 
