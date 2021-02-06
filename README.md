@@ -13,7 +13,7 @@ react template with styled-components+globalstyle, react-router-dom and context 
 > WebApp made in 48 hours
 
 ## Install
-```bash
+```
 $ npm install
 
 $ yarn add
