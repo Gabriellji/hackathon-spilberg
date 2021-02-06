@@ -8,6 +8,7 @@ import Home from "./components/pages/Home";
 import IdeasList from "./components/pages/manager/ideas-list/IdeasList";
 import FavoriteList from "./components/pages/manager/favorite-ideas/FavoriteList";
 import PeerIdea from "./components/pages/employee/PeerIdea";
+import UserProfile from './components/pages/manager/user-profile/UserProfile'
 
 const App = (props) => {
   const context = useContext(Context);
@@ -23,12 +24,12 @@ const App = (props) => {
       <Spacer />
       <Switch>
         <Route exact path="/" render={() => <Home {...props} />} />
-        <Route path="/user/wall" render={() => <Home />} />
-        <Route path="/user/swipe" render={() => <Home />} />
-        <Route path="/user/myideas" render={() => <Home />} />
-        <Route path="/user/newidea" component={PeerIdea} />
+        <Route exact path="/user/wall" render={() => <Home />} />
+        <Route exact path="/user/swipe" render={() => <Home />} />
+        <Route exact path="/user/myideas" render={() => <Home />} />
+        <Route exact path="/user/newidea" component={PeerIdea} />
         <Route exact path="/manager" render={(props) => <IdeasList {...props} />} />
-        <Route path="/manager/userprofile" render={(props) => <Home {...props}/>} />
+        <Route path="/manager/userprofile" render={(props) => <UserProfile {...props}/>} />
         <Route path="/manager/favourites" render={(props) => <FavoriteList {...props}/>} />
       </Switch>
     </main>
