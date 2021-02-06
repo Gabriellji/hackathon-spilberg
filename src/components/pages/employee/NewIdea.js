@@ -84,7 +84,7 @@ const NewIdea = () => {
 
       question3: question3,
 
-      totalLikes: [],
+      totalDislikes:[], totalDislikes:[], totalDislikes:[], totalDislikes:[], totalDislikes:[], totalDislikes:[], totalLikes: [],
       created: "22/01/2021",
     });
 
