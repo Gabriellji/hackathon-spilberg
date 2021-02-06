@@ -1,11 +1,11 @@
-import './style.css';
+import "./style.css";
 
-const UserProfile = ({ name, position, ideas }) => {
+const UserProfile = ({ name, position, onClick }) => {
   return (
     <div className="user-profile_wrap">
       <p>{name}</p>
       <p>{position}</p>
-      <p>Latest contribution: {ideas}</p>
+      <button onClick={(e) => onClick(e)}>Open modal</button>
     </div>
   );
 };

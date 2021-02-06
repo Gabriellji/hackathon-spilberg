@@ -16,7 +16,7 @@ import IdeasList from "./components/pages/manager/ideas-list/IdeasList";
 import FavoriteList from "./components/pages/manager/favorite-ideas/FavoriteList";
 import NewIdea from "./components/pages/employee/NewIdea";
 import EmployeeWall from "./components/pages/employee/EmployeeWall";
-import UserProfile from "./components/pages/manager/user-profile/UserProfile";
+import EmployeeList from "./components/pages/manager/employee-list/EmployeeList";
 // import PeerIdea from "./components/pages/employee/PeerIdea";
 
 const StyledTopBtnsSection = styled.div`
@@ -55,7 +55,7 @@ const App = (props) => {
         <Route exact path="/user/myideas" render={() => <Home />} />
         <Route exact path="/user/newidea" component={NewIdea} />
         <Route exact path="/manager" render={(props) => <IdeasList {...props} />} />
-        <Route path="/manager/userprofile" render={(props) => <UserProfile {...props}/>} />
+        <Route path="/manager/userprofile" render={(props) => <EmployeeList {...props}/>} />
         <Route path="/manager/favourites" render={(props) => <FavoriteList {...props}/>} />
       </Switch>
     </main>
