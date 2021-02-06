@@ -1,10 +1,10 @@
 import "./style.css";
 
-const UserProfile = ({ name, position, onClick }) => {
+const UserProfile = ({ id, name, position, onClick }) => {
   return (
-    <div className="user-profile_wrap" onClick={(e) => onClick(e)}>
-      <p>{name}</p>
-      <p>{position}</p>
+    <div className="user-profile_wrap" id={id} onClick={(e) => onClick(e)}>
+      <p id={id} >{name}</p>
+      <p id={id} >{position}</p>
     </div>
   );
 };
