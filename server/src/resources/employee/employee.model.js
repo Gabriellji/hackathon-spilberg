@@ -22,10 +22,7 @@ const employeeSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  ideas: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'employee',
-  }],
+  ideas: Array,
 });
 
 const employee = mongoose.model("employee", employeeSchema);

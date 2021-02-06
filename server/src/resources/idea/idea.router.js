@@ -4,6 +4,7 @@ const auth = require('../../middleware/auth')
 const { check, validationResult } = require('express-validator')
 
 const Idea = require('./idea.model')
+const Employee = require('../employee/employee.model')
 
 // Public
 // GET /employee/ideas 
@@ -42,16 +43,19 @@ router.post(
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() })
         }
-        const ideaFields = {
-                user: req.user.id,
-            ...req.body,
-        }
         try {
-            const idea = await Idea.findOneAndUpdate(
-                { author_id: req.user.id },
-                { $set: ideaFields },
-                { new: true, upsert: true, setDefaultsOnInsert: true }
-            )
+            const idea = await Idea.create({
+                author_id: req.user.id,
+                ...req.body
+            })
+
+            const employee = await Employee.findOne({
+                _id: req.user.id
+            })
+
+            employee['ideas'].push(idea)
+
+            await employee.save()
 
             res.status(201).json(idea)
         } catch (err) {
