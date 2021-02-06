@@ -1,0 +1,28 @@
+
+.idea_wrap {
+    padding: 3rem;
+}
+
+.total-likes_title {
+    font-size: 5rem;
+    color: #27AE60;
+}
+
+.idea-inner_wrap {
+    border: 1px solid black;
+    border-radius: 5rem;
+    padding: 4rem;
+    margin: 1rem;
+}
+
+.idea-inner_wrap span {
+    font-weight: 700;
+}
+
+.idea-inner_wrap h3 {
+    margin: 1.5rem 0;
+}
+
+.idea-inner_wrap p {
+    padding: .8rem 0;
+}
