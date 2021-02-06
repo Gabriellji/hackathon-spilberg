@@ -87,4 +87,15 @@ router.get('/user/:user_id', async (req, res) => {
     }
 })
 
+
+router.delete('/idea/:idea_id', async (req, res) => {
+    try {
+        await Idea.findOneAndDelete({id: req.params.id})
+        res.send('Successfully deleted')
+    } catch (err) {
+        console.error(err.message)
+        res.status(500).send('Server Error')
+    }
+})
+
 module.exports = router

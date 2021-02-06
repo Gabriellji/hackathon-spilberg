@@ -21,20 +21,8 @@ const ideaSchema = new mongoose.Schema({
   question3: {
     type: String,
   },
-  totalDislikes: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "employee",
-      required: true,
-    },
-  ],
-  totalLikes: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "employee",
-      required: true,
-    },
-  ],
+  totalDislikes: Array,
+  totalLikes: Array,
   created: { type: Date, default: Date.now },
 });
 
