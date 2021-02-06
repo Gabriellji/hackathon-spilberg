@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import { Context } from "./context/Context";
 import styled from "styled-components";
+import {Link} from 'react-router-dom'
 import { theme } from "./data/theme";
 
 // Top Buttons and Burger Menu
@@ -36,14 +37,13 @@ const StyledTopBtnsSection = styled.div`
 
 const App = props => {
   const context = useContext(Context);
-  const [open, setOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <main>
       <StyledTopBtnsSection>
-        <TopBtn action={() => context.setIsAdmin(false)} text="Employee" />
-        <TopBtn action={() => context.setIsAdmin(true)} text="Manager" />
+        <Link to="/"><TopBtn action={() => context.setIsAdmin(true)} text="Manager" /></Link>
+        <Link to="/"><TopBtn action={() => context.setIsAdmin(false)} text="Employee" /></Link>
       </StyledTopBtnsSection>
       <Burger modalOpen={modalOpen} setModalOpen={setModalOpen} />
       <Menu modalOpen={modalOpen} setModalOpen={setModalOpen} />
