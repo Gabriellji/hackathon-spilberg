@@ -3,9 +3,7 @@ import { Context } from '../../../../context/Context';
 import UserIdea from "../user-idea/UserIdea";
 
 const IdeasList = (props) => {
-  console.log(props)
   const { likeHandler, userList } = useContext(Context);
-
   return (
     <div>
       {userList.map((idea) => (

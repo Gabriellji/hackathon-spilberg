@@ -27,7 +27,7 @@ const App = (props) => {
         <Route path="/user/swipe" render={() => <Home />} />
         <Route path="/user/myideas" render={() => <Home />} />
         <Route path="/user/newidea" component={PeerIdea} />
-        <Route path="/manager" render={(props) => <IdeasList {...props} />} />
+        <Route exact path="/manager" render={(props) => <IdeasList {...props} />} />
         <Route path="/manager/userprofile" render={(props) => <Home {...props}/>} />
         <Route path="/manager/favourites" render={(props) => <FavoriteList {...props}/>} />
       </Switch>
