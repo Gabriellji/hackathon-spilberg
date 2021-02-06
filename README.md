@@ -44,6 +44,7 @@ Your managers will have a win win situation, with nice idea at their disposal an
 
 ## Wireframes, Packages and Softwares used
 - Miro https://miro.com/app/board/o9J_lV9IZHo=/
+  Conceptual Map, Users Stories,  
 - Figma
 - React
 - React Router
