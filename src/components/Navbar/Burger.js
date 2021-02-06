@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
+import { theme } from "../../data/theme"
 
 export const StyledBurger = styled.button`
   position: absolute;
@@ -23,7 +24,7 @@ export const StyledBurger = styled.button`
   div {
     width: 2rem;
     height: 0.25rem;
-    background: ${({ modalOpen }) => modalOpen ? "red" : "green"};
+    background: ${({ modalOpen }) => modalOpen ? `${theme.color.purple}` : `${theme.color.orange}`};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
