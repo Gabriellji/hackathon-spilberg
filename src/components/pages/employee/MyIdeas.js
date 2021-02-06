@@ -6,30 +6,40 @@ import UserIdea from "../manager/user-idea/UserIdea";
 const IdeaWrapper = styled.div``;
 const MyIdeas = () => {
   const context = useContext(Context);
+  const [refresh, setRefresh]= useState(false)
   const [myBestIdeas, setMyBestIdeas] = useState([]);
+  const remove = target => {
+    const newUserList = context.userList
+    newUserList[0].ideas=context.userList[0].ideas.filter(
+        idea => idea.id !== target.id
+      )
+    context.setUserList(newUserList)
+    setRefresh(!refresh)
+  };
   useEffect(() => {
     setMyBestIdeas(
       context.userList[0].ideas.sort(
         (a, b) => b.totalLikes.length - a.totalLikes.length
       )
     );
-  }, [myBestIdeas]);
+  }, [myBestIdeas, refresh]);
   return (
     <>
       <h1>my contributions</h1>
       <IdeaWrapper>
         {myBestIdeas.map(idea => (
           <UserIdea
-            /*               onClick={likeHandler} */
+            onClick={() => remove(idea)}
             key={idea.id}
             id={idea.id}
-            name={idea.name}
+            name={context.userList[0].name}
             title={idea.title}
             question1={idea.question1}
             question2={idea.question2}
             question3={idea.question3}
             totalLikes={idea.totalLikes.length}
             created={idea.created}
+            type="favorite"
           />
         ))}
       </IdeaWrapper>
