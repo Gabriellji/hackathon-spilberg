@@ -1,6 +1,7 @@
+import { Context } from "../../../../context/Context";
 import { user } from "../../../../data/data";
 import UserProfile from "../user-profile/UserProfile";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 import "./style.css";
 
@@ -10,16 +11,17 @@ import UserIdea from "../user-idea/UserIdea";
 Modal.setAppElement("#root");
 
 const EmployeeList = ({ location }) => {
+
+  const { likeHandler } = useContext(Context);
+
   const [isOpen, setIsOpen] = useState(false);
   const [employee, setEmployee] = useState("");
-
-  //const getEmployee = (e) => user.find((element) => element.id === e.target.id);
 
   const toggleModal = (e) => {
     const human = user.find((element) => element.id === e.target.id);
     setEmployee(human);
     setIsOpen(!isOpen);
-    console.log(location)
+    console.log(location);
   };
 
   return (
@@ -45,7 +47,8 @@ const EmployeeList = ({ location }) => {
           <div>
             {employee && (
               <UserIdea
-                location={location}
+                onClick={likeHandler}
+                location={location.pathname}
                 key={employee.id}
                 id={employee.id}
                 name={employee.name}
