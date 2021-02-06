@@ -45,8 +45,9 @@ const IdeaQuestions = styled.form`
     p {
       font-size: 18px;
     }
-    
-    input, textarea {
+
+    input,
+    textarea {
       width: 100%;
       border-color: ${theme.color.orange};
       border-radius: 10px;
@@ -55,9 +56,6 @@ const IdeaQuestions = styled.form`
     }
   }
 `;
-
-
-
 
 const NewIdea = () => {
   const [title, setTitle] = useState([]);
@@ -69,7 +67,7 @@ const NewIdea = () => {
   const context = useContext(Context);
   console.log(context);
   //handle change function here
-  const handleOnChange = (e) => {
+  const handleOnChange = e => {
     e.preventDefault();
     e.target.id === "title" && setTitle(e.target.value);
     e.target.id === "question1" && setQuestion1(e.target.value);
@@ -91,52 +89,79 @@ const NewIdea = () => {
 
     // context.pushNewIdeas(newIdeas);
   };
-  const handleOnSubmit = (e) => {
+  const handleOnSubmit = e => {
     e.preventDefault();
     let newUserList = context.userList;
     newUserList[0].ideas = [...newUserList[0].ideas, newIdeas];
     context.setUserList(newUserList);
+    setTitle("");
+    setQuestion1("");
+    setQuestion2("");
+    setQuestion3("");
   };
 
   //   console.log(e.target.e);
   return (
-      <IdeaWrapper>
-        <IdeaTitle>Send an IDEA to your peers</IdeaTitle>
-        <IdeaQuestions onChange={(e) => handleOnChange(e)}>
-          {" "}
-          <div>
-            <p>Title</p>
-            <input id="title" type="text" placeholder="Name of your IDEA..." required />
-          </div>
-          <div>
-            <p>Question 1:</p><p>"What problem does this IDEA solve? / What process will be enhanced by my IDEA?"</p>
-            <textarea
-              id="question1"
-              type="text"
-              placeholder="Answer 1 ..."
-              required
-              rows="4"
-            />
-          </div>
-          <div>
-            <p>Question 2:</p><p> "How my IDEA will improve the current process or setup a new process?"</p>
-            <textarea
-              id="question2"
-              type="text"
-              placeholder="Answer 2 ..."
-              required
-              rows="4"
-            />
-          </div>
-          <div>
-            <p>Question 3:</p>
-            <p>"What part of the current process is not optimal (optional)"</p>
-            <textarea id="question3" type="text" placeholder="Answer 3 ..." rows="4" />
-          </div>
-        </IdeaQuestions>
-        {/* Save inside of context on click */}
-        <TopBtn action={(e) => handleOnSubmit(e)} text="Submit" width="full" />
-      </IdeaWrapper>
+    <IdeaWrapper>
+      <IdeaTitle>Send an IDEA to your peers</IdeaTitle>
+      <IdeaQuestions onChange={e => handleOnChange(e)}>
+        {" "}
+        <div>
+          <p>Title</p>
+          <input
+            id="title"
+            type="text"
+            placeholder="Name of your IDEA..."
+            value={title}
+            required
+          />
+        </div>
+        <div>
+          <p>Question 1:</p>
+          <p>
+            "What problem does this IDEA solve? / What process will be enhanced
+            by my IDEA?"
+          </p>
+          <textarea
+            id="question1"
+            type="text"
+            placeholder="Answer 1 ..."
+            required
+            rows="4"
+            value={question1}
+          />
+        </div>
+        <div>
+          <p>Question 2:</p>
+          <p>
+            {" "}
+            "How my IDEA will improve the current process or setup a new
+            process?"
+          </p>
+          <textarea
+            id="question2"
+            type="text"
+            placeholder="Answer 2 ..."
+            required
+            rows="4"
+            value={question2}
+          />
+        </div>
+        <div>
+          <p>Question 3:</p>
+          <p>"What part of the current process is not optimal (optional)"</p>
+          <textarea
+            id="question3"
+            type="text"
+            placeholder="Answer 3 ..."
+            rows="4"
+            value={question3}
+          />
+        </div>
+      </IdeaQuestions>
+      {/* Save inside of context on click */}
+      <TopBtn action={e => handleOnSubmit(e)} text="Submit" width="full" />
+    </IdeaWrapper>
   );
 };
 export default NewIdea;
