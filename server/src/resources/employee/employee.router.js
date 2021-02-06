@@ -72,4 +72,18 @@ router.post(
     }
 )
 
+// Public
+// GET /employee 
+// gets all exists employees
+
+router.get('/users', async (req, res) => {
+    try {
+        const employees = await Employee.find().select('-password')
+        res.json(employees)
+    } catch (err) {
+        console.error(err.message)
+        res.status(500).send('Server Error')
+    }
+})
+
 module.exports = router

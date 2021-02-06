@@ -34,7 +34,7 @@ router.post(
             return res.status(401).json({ errors: errors.array() })
         }
 
-        const { name, email, password } = req.body
+        const { email, password } = req.body
 
         try {
             let user = await Employee.findOne({ email })
