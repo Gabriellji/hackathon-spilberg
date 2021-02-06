@@ -55,26 +55,29 @@ const Menu = ({ modalOpen, setModalOpen }) => {
           {context.admin ? (
             <>
               <Link onClick={() => (context.scrollTop, setModalOpen(!modalOpen))} to="/manager">
-                Wall
+                Employee IDEAs
               </Link>
               <Link onClick={() => (context.scrollTop, setModalOpen(!modalOpen))} to="/manager/favourites">
                 Favourites
               </Link>
+              <Link onClick={() => (context.scrollTop, setModalOpen(!modalOpen))} to="/manager/userprofile">Employees Profiles</Link>
             </>
           ) : (
               <>
-                <Link onClick={() => (context.scrollTop, setModalOpen(!modalOpen))} to="/user/wall">
-                  Wall
-              </Link>
                 <Link onClick={() => (context.scrollTop, setModalOpen(!modalOpen))} to="/user/swipe">
-                  Swipe
-              </Link>
-                <Link onClick={() => (context.scrollTop, setModalOpen(!modalOpen))} to="/user/myideas">
-                  My Ideas
+                  Vote a Peer IDEA
               </Link>
                 <Link onClick={() => (context.scrollTop, setModalOpen(!modalOpen))} to="/user/newidea">
-                  New Idea
+                  New IDEA
               </Link>
+                <Link onClick={() => (context.scrollTop, setModalOpen(!modalOpen))} to="/user/wall">
+                  Rated IDEAs
+              </Link>
+              
+                <Link onClick={() => (context.scrollTop, setModalOpen(!modalOpen))} to="/user/myideas">
+                  My IDEAs
+              </Link>
+              
               </>
             )}
         </>
