@@ -10,7 +10,8 @@ const ContextProvider = ({ children }) => {
 
   const likeHandler = (e) => {
     console.log(e.target);
-    let itemSelected = user.find((user) => user.id === e.target.id);
+    let itemSelected = userList.find((user) => user.id === e.target.id);
+
     let copyOfItems = [...state];
     copyOfItems.push(itemSelected);
     setState(copyOfItems);
@@ -18,9 +19,25 @@ const ContextProvider = ({ children }) => {
     userList.splice(idx, 1);
   };
 
+  const trashHandler = (e) => {
+    let element = state.find((el) => el.id === e.target.id);
+    const index = state.indexOf(element);
+
+    let copyOfItems = [...state];
+    copyOfItems.splice(index, 1);
+    setState(copyOfItems);
+  };
+
   return (
     <ManagerContext.Provider
-      value={{ state, setState, likeHandler, userList, setUserList }}
+      value={{
+        state,
+        setState,
+        likeHandler,
+        userList,
+        setUserList,
+        trashHandler,
+      }}
     >
       {children}
     </ManagerContext.Provider>
