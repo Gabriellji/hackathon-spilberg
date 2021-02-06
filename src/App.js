@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import { Context } from "./context/Context";
 import styled from "styled-components";
+import {Link} from 'react-router-dom'
 import { theme } from "./data/theme";
 
 // Top Buttons and Burger Menu
@@ -16,7 +17,7 @@ import IdeasList from "./components/pages/manager/ideas-list/IdeasList";
 import FavoriteList from "./components/pages/manager/favorite-ideas/FavoriteList";
 import NewIdea from "./components/pages/employee/NewIdea";
 import EmployeeWall from "./components/pages/employee/EmployeeWall";
-import UserProfile from "./components/pages/manager/user-profile/UserProfile";
+import EmployeeList from "./components/pages/manager/employee-list/EmployeeList";
 import MyIdeas from "./components/pages/employee/MyIdeas";
 // import PeerIdea from "./components/pages/employee/PeerIdea";
 
@@ -36,14 +37,13 @@ const StyledTopBtnsSection = styled.div`
 
 const App = props => {
   const context = useContext(Context);
-  const [open, setOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <main>
       <StyledTopBtnsSection>
-        <TopBtn action={() => context.setIsAdmin(false)} text="Employee" />
-        <TopBtn action={() => context.setIsAdmin(true)} text="Manager" />
+        <Link to="/"><TopBtn action={() => context.setIsAdmin(true)} text="Manager" /></Link>
+        <Link to="/"><TopBtn action={() => context.setIsAdmin(false)} text="Employee" /></Link>
       </StyledTopBtnsSection>
       <Burger modalOpen={modalOpen} setModalOpen={setModalOpen} />
       <Menu modalOpen={modalOpen} setModalOpen={setModalOpen} />
@@ -61,7 +61,7 @@ const App = props => {
         />
         <Route
           path="/manager/userprofile"
-          render={props => <UserProfile {...props} />}
+          render={props => <EmployeeList {...props} />}
         />
         <Route
           path="/manager/favourites"
