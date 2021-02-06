@@ -4,7 +4,7 @@ const ideaSchema = new mongoose.Schema({
   author_id: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "employee",
-    required: true
+    required: true,
   },
   title: {
     type: String,
@@ -21,8 +21,8 @@ const ideaSchema = new mongoose.Schema({
   question3: {
     type: String,
   },
-  totalDislikes: Array,
-  totalLikes: Array,
+  totalDislikes: ["Lolita", "Carlos", "Nina"],
+  totalLikes: ['Alfred', "Pedro", "Valentin", "Kristina", "Teiko"],
   created: { type: Date, default: Date.now },
 });
 

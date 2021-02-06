@@ -5,6 +5,7 @@ const employeeRouter = require('./resources/employee/employee.router')
 const authRouter = require('./resources/employee/auth.router')
 const ideaRouter = require('./resources/idea/idea.router')
 
+
 app.use(express.json())
 
 app.use('/', (req, res, next) => {
