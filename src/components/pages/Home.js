@@ -12,7 +12,7 @@ display:flex;
 div:nth-of-type(1){
     order:1
 }
-div:nth-of-type(3){
+div:nth-of-type(2){
 
 }
 div:nth-of-type(3){
