@@ -2,8 +2,9 @@ import { Context } from "../../../../context/Context";
 import { user } from "../../../../data/data";
 import UserProfile from "../user-profile/UserProfile";
 import React, { useState, useContext } from "react";
-import { FaWindowClose } from "react-icons/fa";
+import SearchPanel from "../search-panel/SearchPanel";
 
+import { FaWindowClose } from "react-icons/fa";
 import "./style.css";
 
 import Modal from "react-modal";
@@ -12,11 +13,25 @@ import UserIdea from "../user-idea/UserIdea";
 Modal.setAppElement("#root");
 
 const EmployeeList = ({ location }) => {
-
   const { likeHandler } = useContext(Context);
 
   const [isOpen, setIsOpen] = useState(false);
   const [employee, setEmployee] = useState("");
+  const [value, setValue] = useState("");
+  const [people, setPeople] = useState("");
+
+  const handleOnChange = (e) => {
+    setValue(e.target.value);
+  };
+
+  const clickHandler = () => {
+    const person = user.filter((element) => element.name.includes(value));
+    setPeople(person);
+  };
+
+  const filteredPeople = user.filter(el => 
+    el.name.toLowerCase().includes(value.toLocaleLowerCase())
+    )
 
   const toggleModal = (e) => {
     const human = user.find((element) => element.id === e.target.id);
@@ -27,16 +42,22 @@ const EmployeeList = ({ location }) => {
 
   return (
     <div className="employee_wrap">
+      <SearchPanel
+        value={value}
+        onChange={handleOnChange}
+        onClick={clickHandler}
+      />
       <div className="employee-inner_wrap">
-        {user.map((employee) => (
-          <UserProfile
-            key={employee.id}
-            id={employee.id}
-            name={employee.name}
-            position={employee.position}
-            onClick={toggleModal}
-          />
-        ))}
+        { filteredPeople.map((employee) => (
+              <UserProfile
+                key={employee.id}
+                id={employee.id}
+                name={employee.name}
+                position={employee.position}
+                onClick={toggleModal}
+              />
+            ))
+          }
         <Modal
           isOpen={isOpen}
           onRequestClose={toggleModal}
@@ -62,7 +83,7 @@ const EmployeeList = ({ location }) => {
               />
             )}
           </div>
-          <FaWindowClose className="close_btn" onClick={toggleModal}/>
+          <FaWindowClose className="close_btn" onClick={toggleModal} />
         </Modal>
       </div>
     </div>
