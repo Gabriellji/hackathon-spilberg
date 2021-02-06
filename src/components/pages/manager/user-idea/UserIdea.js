@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { FaRegHeart } from "react-icons/fa";
+import { FaRegTrashAlt } from "react-icons/fa";
 import "./style.css";
 
 const IconWrap = styled.div`
@@ -16,7 +17,8 @@ const UserIdea = ({
   totalLikes,
   created,
   onClick,
-  type
+  type,
+  location
 }) => {
   return (
     <div className="idea_wrap">
@@ -24,7 +26,9 @@ const UserIdea = ({
       <div className="idea-inner_wrap">
         <IconWrap type={type} className="like_icon">
           <div className="icon-inner_wrap">
-            <FaRegHeart id={id} onClick={(e) => onClick(e)}/>
+          {location === '/manager' ? <FaRegHeart id={id} onClick={(e) => onClick(e)}/>
+          : <FaRegTrashAlt id={id} onClick={(e) => onClick(e)}/>
+          }
           </div>
         </IconWrap>
         <h3>{title}</h3>

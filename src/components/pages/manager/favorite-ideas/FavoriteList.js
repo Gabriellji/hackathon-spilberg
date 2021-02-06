@@ -4,7 +4,7 @@ import UserIdea from "../user-idea/UserIdea";
 
 const FavoriteList = () => {
   const { state, trashHandler } = useContext(Context);
-
+ 
   return (
     <>
       <h1>Favorite List</h1>
