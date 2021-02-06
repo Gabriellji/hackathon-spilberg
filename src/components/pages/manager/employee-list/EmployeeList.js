@@ -2,6 +2,7 @@ import { Context } from "../../../../context/Context";
 import { user } from "../../../../data/data";
 import UserProfile from "../user-profile/UserProfile";
 import React, { useState, useContext } from "react";
+import { FaWindowClose } from "react-icons/fa";
 
 import "./style.css";
 
@@ -61,7 +62,7 @@ const EmployeeList = ({ location }) => {
               />
             )}
           </div>
-          <button onClick={toggleModal}>Close modal</button>
+          <FaWindowClose className="close_btn" onClick={toggleModal}/>
         </Modal>
       </div>
     </div>
@@ -69,12 +70,3 @@ const EmployeeList = ({ location }) => {
 };
 
 export default EmployeeList;
-
-// id,
-//   name,
-//   title,
-//   question1,
-//   question2,
-//   question3,
-//   totalLikes,
-//   created,
