@@ -17,8 +17,8 @@ const UserIdea = ({
       <h1 className="total-likes_title">{totalLikes} Upvote</h1>
       <div className="idea-inner_wrap">
         <div className="like_icon">
-          <div className="icon-inner_wrap" id={id} onClick={(e) => onClick(e)}>
-            <FaRegHeart />
+          <div className="icon-inner_wrap">
+            <FaRegHeart id={id} onClick={(e) => onClick(e)}/>
           </div>
         </div>
         <h3>{title}</h3>

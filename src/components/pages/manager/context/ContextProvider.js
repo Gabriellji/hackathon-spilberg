@@ -7,6 +7,7 @@ const ContextProvider = ({children}) => {
     const [state, setState] = useState('');
 
     const likeHandler = (e) => {
+        console.log(e.target)
         let itemSelected = user.find(user => user.id === e.target.id);
         let copyOfItems = [...state];
         copyOfItems.push(itemSelected);
