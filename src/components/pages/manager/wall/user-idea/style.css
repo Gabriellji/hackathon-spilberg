@@ -15,6 +15,17 @@
     margin: 1rem;
 }
 
+.idea-inner_wrap .like_icon svg {
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+}
+
+.like_icon {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .idea-inner_wrap span {
     font-weight: 700;
 }
