@@ -96,7 +96,6 @@ export const user = [
         question3:
           " when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more ",
         totalLikes: [
-          /* likes other users gave. i want an array of name of users liking the comment  */
         ],
         created: "22/01/2021",
       },
@@ -271,7 +270,7 @@ export const bestIdeas = [
       "lorem", "ipsum", "hello"
     ],
     created: "22/01/2021",
-    user_id: 0
+    name:"Naomi Carey"
   },
   {
     id: uuidv4() /* uuidv */,
@@ -286,7 +285,7 @@ export const bestIdeas = [
       "ipsum", "hello"
     ],
     created: "22/01/2021",
-    user_id: 0
+    name:"Jane Doe"
   },
   {
     id: uuidv4() /* uuidv */,
@@ -301,6 +300,6 @@ export const bestIdeas = [
       "ipsum", "hello"
     ],
     created: "22/01/2021",
-    user_id: 0
+    name:"V"
   }
 ]

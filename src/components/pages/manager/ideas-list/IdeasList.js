@@ -19,6 +19,7 @@ const IdeasList = (props) => {
           question3={idea.ideas[0].question3}
           totalLikes={idea.ideas[0].totalLikes.length}
           created={idea.ideas[0].created}
+          type="list"
         />
       ))}
     </div>
