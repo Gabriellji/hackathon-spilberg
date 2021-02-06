@@ -23,7 +23,7 @@ const MyIdeas = () => {
             /*               onClick={likeHandler} */
             key={idea.id}
             id={idea.id}
-            name={idea.name}
+            name={context.userList[0].name}
             title={idea.title}
             question1={idea.question1}
             question2={idea.question2}
