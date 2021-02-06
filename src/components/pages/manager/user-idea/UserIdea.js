@@ -1,4 +1,5 @@
 import { FaRegHeart } from "react-icons/fa";
+import { FaRegTrashAlt } from "react-icons/fa";
 import "./style.css";
 
 const UserIdea = ({
@@ -11,6 +12,7 @@ const UserIdea = ({
   totalLikes,
   created,
   onClick,
+  location
 }) => {
   return (
     <div className="idea_wrap">
@@ -18,7 +20,10 @@ const UserIdea = ({
       <div className="idea-inner_wrap">
         <div className="like_icon">
           <div className="icon-inner_wrap">
-            <FaRegHeart id={id} onClick={(e) => onClick(e)}/>
+          {location === '/manager' ? <FaRegHeart id={id} onClick={(e) => onClick(e)}/>
+          : <FaRegTrashAlt id={id} onClick={(e) => onClick(e)}/>
+          }
+            {/* <FaRegHeart id={id} onClick={(e) => onClick(e)}/> */}
           </div>
         </div>
         <h3>{title}</h3>

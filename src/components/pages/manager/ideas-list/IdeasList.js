@@ -2,12 +2,15 @@ import React, { useContext } from "react";
 import { Context } from '../../../../context/Context';
 import UserIdea from "../user-idea/UserIdea";
 
-const IdeasList = () => {
+const IdeasList = (props) => {
+  console.log(props)
   const { likeHandler, userList } = useContext(Context);
+
   return (
     <div>
       {userList.map((idea) => (
         <UserIdea
+        location={props.location.pathname}
           onClick={likeHandler}
           key={idea.ideas[0].id}
           id={idea.id}
