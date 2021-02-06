@@ -1,10 +1,11 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 import { FaRegHeart } from "react-icons/fa";
+import { FaTrashAlt } from "react-icons/fa";
 import "./style.css";
 
 const IconWrap = styled.div`
-display: ${p=>p.type==="fame" && "none"}
-`
+  display: ${p => p.type === "fame" && "none"};
+`;
 
 const UserIdea = ({
   id,
@@ -16,7 +17,7 @@ const UserIdea = ({
   totalLikes,
   created,
   onClick,
-  type
+  type,
 }) => {
   return (
     <div className="idea_wrap">
@@ -24,7 +25,8 @@ const UserIdea = ({
       <div className="idea-inner_wrap">
         <IconWrap type={type} className="like_icon">
           <div className="icon-inner_wrap">
-            <FaRegHeart id={id} onClick={(e) => onClick(e)}/>
+            {type==="list" && <FaRegHeart id={id} onClick={e => onClick(e)} />}
+            {type==="favorite" && <FaTrashAlt id={id} onClick={e => onClick(e)} />}
           </div>
         </IconWrap>
         <h3>{title}</h3>
