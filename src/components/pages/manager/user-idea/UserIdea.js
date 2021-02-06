@@ -1,11 +1,22 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { theme } from '../../../../data/theme';
 import { FaRegHeart } from "react-icons/fa";
 import { FaRegTrashAlt } from "react-icons/fa";
-import "./style.css";
+
+const StyledUserIdea = styled.div`
+  padding: 8px;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid ${theme.color.orange};
+  border-radius: 10px;
+`;
+
 
 const IconWrap = styled.div`
-display: ${p=>p.type==="fame" && "none"}
-`
+display: ${(p) => p.type === "fame" && "none"};
+`;
 
 const UserIdea = ({
   id,
@@ -21,14 +32,14 @@ const UserIdea = ({
   location
 }) => {
   return (
-    <div className="idea_wrap">
+    <StyledUserIdea>
       <h1 className="total-likes_title">{totalLikes} Upvote</h1>
       <div className="idea-inner_wrap">
         <IconWrap type={type} className="like_icon">
           <div className="icon-inner_wrap">
-          {location === '/manager' ? <FaRegHeart id={id} onClick={(e) => onClick(e)}/>
-          : <FaRegTrashAlt id={id} onClick={(e) => onClick(e)}/>
-          }
+            {location === '/manager' ? <FaRegHeart id={id} onClick={(e) => onClick(e)} />
+              : <FaRegTrashAlt id={id} onClick={(e) => onClick(e)} />
+            }
           </div>
         </IconWrap>
         <h3>{title}</h3>
@@ -48,7 +59,7 @@ const UserIdea = ({
       <p>
         Submitted by {name} at {created}
       </p>
-    </div>
+    </StyledUserIdea>
   );
 };
 
