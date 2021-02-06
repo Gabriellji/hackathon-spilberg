@@ -21,6 +21,7 @@ export const StyledTopBtn = styled.button`
         background-color: ${theme.color.yellow};
         color: ${theme.color.purple};
         border: 2px solid ${theme.color.purple};
+        transform: scale(1.2);
     }
 `;
 
