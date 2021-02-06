@@ -66,27 +66,34 @@ const StyledFameContainer = styled.div`
     }
 `;
 
-const Home = () => (
-    <StyledHome>
-        <StyledHomeTitle>WALL OF FAME</StyledHomeTitle>
-        <h3>Best ideas brought up last month by our employees</h3>
-        <StyledFameContainer>
-            {bestIdeas.map((idea, index) => (
-                <UserIdea
-                    key={idea.id}
-                    id={idea.id}
-                    name={idea.name}
-                    title={idea.title}
-                    question1={idea.question1}
-                    question2={idea.question2}
-                    question3={idea.question3}
-                    totalLikes={idea.totalLikes.length}
-                    created={idea.created}
-                    rank={index}
-                />
-            ))}
-        </StyledFameContainer>
-    </StyledHome>
-);
+const Home = () => {
+    const context = useContext(Context);
+
+    return (
+        <StyledHome>
+            <StyledHomeTitle>WALL OF FAME</StyledHomeTitle>
+            { context.admin
+                ? <h3>Best ideas brought up last month by our employees</h3>
+                : <h3>Our best idea from last month</h3>
+            }
+            <StyledFameContainer>
+                {bestIdeas.map((idea, index) => (
+                    <UserIdea
+                        key={idea.id}
+                        id={idea.id}
+                        name={idea.name}
+                        title={idea.title}
+                        question1={idea.question1}
+                        question2={idea.question2}
+                        question3={idea.question3}
+                        totalLikes={idea.totalLikes.length}
+                        created={idea.created}
+                        rank={index}
+                    />
+                ))}
+            </StyledFameContainer>
+        </StyledHome>
+    )
+};
 
 export default Home;

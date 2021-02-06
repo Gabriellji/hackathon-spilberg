@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import { Context } from "./context/Context";
 import styled from "styled-components";
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { theme } from "./data/theme";
 
 // Top Buttons and Burger Menu
@@ -20,6 +20,18 @@ import EmployeeWall from "./components/pages/employee/EmployeeWall";
 import EmployeeList from "./components/pages/manager/employee-list/EmployeeList";
 import MyIdeas from "./components/pages/employee/MyIdeas";
 // import PeerIdea from "./components/pages/employee/PeerIdea";
+
+const StyledSuperText = styled.p`
+  width: 100%;
+  padding: 2px;
+  text-align: right;
+  font-size: 18px;
+  color: white;
+  background-color: black;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+`;
 
 const StyledTopBtnsSection = styled.div`
   width: 100vw;
@@ -40,7 +52,11 @@ const App = props => {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <main>
+    <>
+      {context.admin
+        ? <StyledSuperText>Manager User</StyledSuperText>
+        : <StyledSuperText>Employee User</StyledSuperText>
+      }
       <StyledTopBtnsSection>
         <Link to="/"><TopBtn action={() => context.setIsAdmin(true)} text="Manager" /></Link>
         <Link to="/"><TopBtn action={() => context.setIsAdmin(false)} text="Employee" /></Link>
@@ -49,7 +65,7 @@ const App = props => {
       <Menu modalOpen={modalOpen} setModalOpen={setModalOpen} />
       <Spacer />
       <Switch>
-        <Route exact path="/" render={() => <Home {...props}/>} />
+        <Route exact path="/" render={() => <Home {...props} />} />
         <Route exact path="/user/wall" component={EmployeeWall} />
         <Route exact path="/user/swipe" render={() => <Home />} />
         <Route exact path="/user/myideas" component={MyIdeas} />
@@ -68,7 +84,7 @@ const App = props => {
           render={props => <FavoriteList {...props} />}
         />
       </Switch>
-    </main>
+    </>
   );
 };
 
