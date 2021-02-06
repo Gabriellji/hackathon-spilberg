@@ -3,16 +3,33 @@ import styled from "styled-components";
 import { Context } from "../../../context/Context";
 import UserIdea from "../manager/user-idea/UserIdea";
 
-const IdeaWrapper = styled.div``;
+const StyledMyIdeasTitle = styled.h1`
+  width: 100%;
+  text-align: center;
+`;
+
+const StyledIdeaWrapper = styled.div`
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @media (min-width: 376px) {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 460px));
+  }
+`;
+
 const MyIdeas = () => {
   const context = useContext(Context);
-  const [refresh, setRefresh]= useState(false)
+  const [refresh, setRefresh] = useState(false)
   const [myBestIdeas, setMyBestIdeas] = useState([]);
   const remove = target => {
     const newUserList = context.userList
-    newUserList[0].ideas=context.userList[0].ideas.filter(
-        idea => idea.id !== target.id
-      )
+    newUserList[0].ideas = context.userList[0].ideas.filter(
+      idea => idea.id !== target.id
+    )
     context.setUserList(newUserList)
     setRefresh(!refresh)
   };
@@ -25,8 +42,8 @@ const MyIdeas = () => {
   }, [myBestIdeas, refresh]);
   return (
     <>
-      <h1>my contributions</h1>
-      <IdeaWrapper>
+      <StyledMyIdeasTitle>My IDEAs</StyledMyIdeasTitle>
+      <StyledIdeaWrapper>
         {myBestIdeas.map(idea => (
           <UserIdea
             onClick={() => remove(idea)}
@@ -42,7 +59,7 @@ const MyIdeas = () => {
             type="favorite"
           />
         ))}
-      </IdeaWrapper>
+      </StyledIdeaWrapper>
     </>
   );
 };
