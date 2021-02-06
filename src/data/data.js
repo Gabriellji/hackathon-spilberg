@@ -1,3 +1,5 @@
+const { v4: uuidv4 } = require('uuid')
+
 export const managers = [
   {
     name: "Jacopo Luri",
@@ -9,7 +11,7 @@ export const managers = [
 
 export const user = [
   {
-    id: 1 /* uuidv */,
+    id: uuidv4() /* uuidv */,
     username: "user" /* string */,
     password: "user" /* string */,
     name: "Naomi Carey" /* string */,
@@ -17,7 +19,7 @@ export const user = [
     ideas: [
       /* put array of ideas here */
       {
-        id: 1 /* uuidv */,
+        id: uuidv4() /* uuidv */,
         title: "Fresh pizza at work",
         question1:
           "is simply dummy text of the printing and typesetting industry. ",
@@ -33,7 +35,7 @@ export const user = [
     ],
   },
   {
-    id: 2 /* uuidv */,
+    id: uuidv4() /* uuidv */,
     username: "Peppe" /* string */,
     password: "user" /* string */,
     name: "Anna Salo" /* string */,
@@ -41,7 +43,7 @@ export const user = [
     ideas: [
       /* put array of ideas here */
       {
-        id: 2,
+        id: uuidv4(),
         title: "Cofee machine at office",
         question1:
           "is simply dummy text of the printing and typesetting industry. ",
@@ -51,21 +53,21 @@ export const user = [
           " when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more ",
         totalLikes: [
           {
-            id: 7 /* uuidv */,
+            id: uuidv4() /* uuidv */,
             username: "Pizza" /* string */,
             password: "user" /* string */,
             name: "Naomi Carey" /* string */,
             position: "" /* string */,
           },
           {
-            id: 6 /* uuidv */,
+            id: uuidv4() /* uuidv */,
             username: "Silvester" /* string */,
             password: "user" /* string */,
             name: "Silvester Stallone" /* string */,
             position: "writer",
           },
           {
-            id: 4 /* uuidv */,
+            id: uuidv4() /* uuidv */,
             username: "Bonito" /* string */,
             password: "user" /* string */,
             name: "Chowauwa" /* string */,
@@ -77,7 +79,7 @@ export const user = [
     ],
   },
   {
-    id: 3 /* uuidv */,
+    id: uuidv4() /* uuidv */,
     username: "Bear" /* string */,
     password: "user" /* string */,
     name: "Yahoo Karlos" /* string */,
@@ -85,7 +87,7 @@ export const user = [
     ideas: [
       /* put array of ideas here */
       {
-        id: 1 /* uuidv */,
+        id: uuidv4() /* uuidv */,
         title: "Morning stand ups",
         question1:
           "is simply dummy text of the printing and typesetting industry. ",
@@ -101,7 +103,7 @@ export const user = [
     ],
   },
   {
-    id: 4 /* uuidv */,
+    id: uuidv4() /* uuidv */,
     username: "Bonito" /* string */,
     password: "user" /* string */,
     name: "Chowauwa" /* string */,
@@ -109,7 +111,7 @@ export const user = [
     ideas: [
       /* put array of ideas here */
       {
-        id: 1 /* uuidv */,
+        id: uuidv4() /* uuidv */,
         title: "Expand sickleave",
         question1:
           "is simply dummy text of the printing and typesetting industry. ",
@@ -125,7 +127,7 @@ export const user = [
     ],
   },
   {
-    id: 5 /* uuidv */,
+    id: uuidv4() /* uuidv */,
     username: "Mary" /* string */,
     password: "user" /* string */,
     name: "Marry Poppins" /* string */,
@@ -133,7 +135,7 @@ export const user = [
     ideas: [
       /* put array of ideas here */
       {
-        id: 1 /* uuidv */,
+        id: uuidv4() /* uuidv */,
         title: "More breaks",
         question1:
           "is simply dummy text of the printing and typesetting industry. ",
@@ -149,7 +151,7 @@ export const user = [
     ],
   },
   {
-    id: 6 /* uuidv */,
+    id: uuidv4() /* uuidv */,
     username: "Silvester" /* string */,
     password: "user" /* string */,
     name: "Silvester Stallone" /* string */,
@@ -157,7 +159,7 @@ export const user = [
     ideas: [
       /* put array of ideas here */
       {
-        id: 1 /* uuidv */,
+        id: uuidv4() /* uuidv */,
         title: "Need new Manager",
         question1:
           "is simply dummy text of the printing and typesetting industry. ",
@@ -173,7 +175,7 @@ export const user = [
     ],
   },
   {
-    id: 7 /* uuidv */,
+    id: uuidv4() /* uuidv */,
     username: "Pizza" /* string */,
     password: "user" /* string */,
     name: "Naomi Carey" /* string */,
@@ -181,7 +183,7 @@ export const user = [
     ideas: [
       /* put array of ideas here */
       {
-        id: 1 /* uuidv */,
+        id: uuidv4() /* uuidv */,
         title: "Better time management",
         question1:
           "is simply dummy text of the printing and typesetting industry. ",
@@ -191,21 +193,21 @@ export const user = [
           " when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more ",
         totalLikes: [
           {
-            id: 7 /* uuidv */,
+            id: uuidv4() /* uuidv */,
             username: "Pizza" /* string */,
             password: "user" /* string */,
             name: "Naomi Carey" /* string */,
             position: "" /* string */,
           },
           {
-            id: 6 /* uuidv */,
+            id: uuidv4() /* uuidv */,
             username: "Silvester" /* string */,
             password: "user" /* string */,
             name: "Silvester Stallone" /* string */,
             position: "writer",
           },
           {
-            id: 4 /* uuidv */,
+            id: uuidv4() /* uuidv */,
             username: "Bonito" /* string */,
             password: "user" /* string */,
             name: "Chowauwa" /* string */,
@@ -217,7 +219,7 @@ export const user = [
     ],
   },
   {
-    id: 8 /* uuidv */,
+    id: uuidv4() /* uuidv */,
     username: "Bob" /* string */,
     password: "user" /* string */,
     name: "Zheniya Habrykava" /* string */,
@@ -225,7 +227,7 @@ export const user = [
     ideas: [
       /* put array of ideas here */
       {
-        id: 1 /* uuidv */,
+        id: uuidv4() /* uuidv */,
         title: "More workers for writer department",
         question1:
           "is simply dummy text of the printing and typesetting industry. ",
@@ -235,14 +237,14 @@ export const user = [
           " when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more ",
         totalLikes: [
           {
-            id: 7 /* uuidv */,
+            id: uuidv4() /* uuidv */,
             username: "Pizza" /* string */,
             password: "user" /* string */,
             name: "Naomi Carey" /* string */,
             position: "" /* string */,
           },
           {
-            id: 6 /* uuidv */,
+            id: uuidv4() /* uuidv */,
             username: "Silvester" /* string */,
             password: "user" /* string */,
             name: "Silvester Stallone" /* string */,
