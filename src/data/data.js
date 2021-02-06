@@ -290,7 +290,7 @@ export const user = [
 export const bestIdeas = [
   {
     id: uuidv4() /* uuidv */,
-    title: "Fresh pizza at work",
+    title: "Everyday pizza at work",
     question1:
       "is simply dummy text of the printing and typesetting industry. ",
     question2:
@@ -299,12 +299,12 @@ export const bestIdeas = [
       " when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more ",
     totalDislikes: [],
     totalLikes: ["lorem", "ipsum", "hello"],
-    created: "22/01/2021",
+    created: "01/01/2021",
     name: "Naomi Carey",
   },
   {
     id: uuidv4() /* uuidv */,
-    title: "Fresh pizza at work",
+    title: "New laptops for everyone!",
     question1:
       "is simply dummy text of the printing and typesetting industry. ",
     question2:
@@ -313,12 +313,12 @@ export const bestIdeas = [
       " when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more ",
     totalDislikes: [],
     totalLikes: ["ipsum", "hello"],
-    created: "22/01/2021",
+    created: "15/01/2021",
     name: "Jane Doe",
   },
   {
     id: uuidv4() /* uuidv */,
-    title: "Fresh pizza at work",
+    title: "Remote working up to 60%",
     question1:
       "is simply dummy text of the printing and typesetting industry. ",
     question2:
@@ -327,7 +327,7 @@ export const bestIdeas = [
       " when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more ",
     totalDislikes: [],
     totalLikes: ["ipsum", "hello"],
-    created: "22/01/2021",
+    created: "29/01/2021",
     name: "V",
   },
 ];
