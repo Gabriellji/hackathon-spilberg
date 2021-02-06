@@ -49,10 +49,11 @@ const IdeaQuestions = styled.form`
     input,
     textarea {
       width: 100%;
-      border-color: ${theme.color.orange};
+      border: 1px solid ${theme.color.orange};
       border-radius: 10px;
       line-height: 32px;
       padding: 4px;
+      resize: vertical;
     }
   }
 `;

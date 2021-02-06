@@ -10,7 +10,7 @@ const StyledFavListTitle = styled.h1`
 `;
 
 const StyledFavoriteList = styled.div`
-  padding: 16px;
+  padding: 8px;
   display: flex;
   flex-direction: column;
   gap: 8px;
