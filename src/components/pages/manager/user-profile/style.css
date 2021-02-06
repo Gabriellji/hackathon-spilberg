@@ -1,0 +1,7 @@
+.user-profile_wrap {
+    display: flex;
+    cursor: pointer;
+    width: fit-content;
+    flex-direction: column;
+    border: 1px solid black;
+}

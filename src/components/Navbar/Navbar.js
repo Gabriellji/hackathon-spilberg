@@ -48,7 +48,7 @@ const Navbar = () => {
           </Link>
           {context.admin ? (
             <>
-              <Link onClick={() => context.scrollTop} to="/manager/wall">
+              <Link onClick={() => context.scrollTop} to="/manager">
                 Wall
               </Link>
               <Link onClick={() => context.scrollTop} to="/manager/favourites">
@@ -80,7 +80,7 @@ const Navbar = () => {
         </Link>
         {context.admin ? (
           <>
-            <Link onClick={() => context.scrollTop} to="/manager/wall">
+            <Link onClick={() => context.scrollTop} to="/manager">
               Wall
             </Link>
             <Link onClick={() => context.scrollTop} to="/manager/favourites">

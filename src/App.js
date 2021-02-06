@@ -3,6 +3,8 @@ import {Switch, Route} from 'react-router-dom'
 import {Context} from './context/Context'
 import Home from './components/pages/Home'
 import Navbar from './components/Navbar/Navbar'
+import IdeasList from './components/pages/manager/ideas-list/IdeasList'
+import FavoriteList from './components/pages/manager/favorite-ideas/FavoriteList'
 
 const App = () => {
   const context = useContext(Context)
@@ -16,16 +18,16 @@ const App = () => {
       <Navbar/>
       <Switch>
         <Route exact path="/" render={() => <Home />} />
-        <Route path="/user/wall" render={() => <Home />} />
-        <Route path="/user/swipe" render={() => <Home />} />
-        <Route path="/user/myideas" render={() => <Home />} />
-        <Route path="/user/newidea" render={() => <Home />} />
-        <Route path="/manager/wall" render={() => <Home />} />
-        <Route path="/manager/userprofile" render={() => <Home />} />
-        <Route path="/manager/favourites" render={() => <Home />} />
+        <Route exact path="/user/wall" render={() => <Home />} />
+        <Route exact path="/user/swipe" render={() => <Home />} />
+        <Route exact path="/user/myideas" render={() => <Home />} />
+        <Route exact path="/user/newidea" render={() => <Home />} />
+        <Route exact path="/manager/" render={() => <IdeasList />} />
+        <Route exact path="/manager/userprofile" render={() => <Home />} />
+        <Route exact path="/manager/favourites" render={() => <FavoriteList />} />
       </Switch>
     </main>
-  )
-}
+  );
+};
 
 export default App;
