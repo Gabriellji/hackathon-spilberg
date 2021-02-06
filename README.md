@@ -33,11 +33,16 @@ SD Work gave us this task:
 
 ## IDEAs
 Communication inside both littles and bigs companies is really hard.
+
 Maybe an employee have an amazing idea but his voice is lost...
+
 Maybe the managers are stuck on something...
+
 Maybe the solution is inside your own company, maybe you need to ask Gary from the 2nd floor, or Karen from accountant.
 
+
 IDEAs purpose is to promote the best, and only the best, ideas from your own employees, and improving their engagement to company's colture!
+
 Your managers will have a win win situation, with nice ideas at their disposal and more engaged employees. 
 
 ## Wireframes, Packages and Softwares used
