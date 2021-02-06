@@ -13,38 +13,10 @@ const employeeSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  ideas: [
-    {
-      title: {
-        type: String,
-        required: true,
-      },
-      question1: {
-        type: String,
-        required: true,
-      },
-      question2: {
-        type: String,
-        required: true,
-      },
-      question3: {
-        type: String,
-      },
-      totalDislikes: [
-        {
-          type: mongoose.Schema.Types.ObjectId,
-          ref: "employee",
-          required: true
-        },
-      ],
-      totalLikes: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "employee",
-        required: true
-      }],
-      created: { type: Date, default: Date.now },
-    },
-  ],
+  ideas: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'employee',
+  }],
 });
 
 const employee = mongoose.model("employee", employeeSchema);
