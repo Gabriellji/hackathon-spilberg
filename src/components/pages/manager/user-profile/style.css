@@ -1,7 +1,11 @@
 .user-profile_wrap {
     display: flex;
     cursor: pointer;
-    width: fit-content;
+    font-size: 4rem;
+    margin: 1rem;
+    text-align: center;
+    width: -moz-fit-content;
+    width: 70%;
     flex-direction: column;
     border: 1px solid black;
 }
