@@ -9,7 +9,6 @@ const Provider = ({ children }) => {
   const [userList, setUserList] = useState(newList);
   const [state, setState] = useState("");
   const likeHandler = e => {
-    console.log(e.target);
     let itemSelected = userList.find(user => user.id === e.target.id);
 
     let copyOfItems = [...state];
@@ -17,6 +16,7 @@ const Provider = ({ children }) => {
     setState(copyOfItems);
     const idx = userList.indexOf(itemSelected);
     userList.splice(idx, 1);
+    console.log(state)
   };
   const trashHandler = e => {
     let element = state.find(el => el.id === e.target.id);

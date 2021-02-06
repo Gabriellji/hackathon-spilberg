@@ -2,6 +2,62 @@ import styled from "styled-components";
 import React, { useState, useContext } from "react";
 import { Context } from "../../../context/Context";
 import { v4 as uuidv } from "uuid";
+import { theme } from "../../../data/theme";
+
+import TopBtn from "../../Navbar/TopBtns";
+
+const IdeaWrapper = styled.div`
+  padding: 8px;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid ${theme.color.orange};
+  border-radius: 10px;
+
+  @media (min-width: 376px) {
+    border: none;
+
+    button {
+      width: auto;
+      margin-left: auto;
+    }
+  }
+`;
+
+const IdeaTitle = styled.h1`
+  text-align: center;
+`;
+
+const IdeaQuestions = styled.form`
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: left;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    p {
+      font-size: 18px;
+    }
+    
+    input, textarea {
+      width: 100%;
+      border-color: ${theme.color.orange};
+      border-radius: 10px;
+      line-height: 32px;
+      padding: 4px;
+    }
+  }
+`;
+
+
+
 
 const NewIdea = () => {
   const [title, setTitle] = useState([]);
@@ -44,85 +100,43 @@ const NewIdea = () => {
 
   //   console.log(e.target.e);
   return (
-    <div>
       <IdeaWrapper>
-        <IdeaTitle>Send and idea to your peers</IdeaTitle>
+        <IdeaTitle>Send an IDEA to your peers</IdeaTitle>
         <IdeaQuestions onChange={(e) => handleOnChange(e)}>
           {" "}
-          <p>Title</p>
-          <input id="title" type="text" placeholder="Title" required />
-          <p>Question #1 </p>
-          <input
-            id="question1"
-            type="text"
-            placeholder="Answer 1 ..."
-            required
-          />
-          <p>Question #2 </p>
-          <input
-            id="question2"
-            type="text"
-            placeholder="Answer 2 ..."
-            required
-          />
-          <p>Question #3 </p>
-          <input id="question3" type="text" placeholder="Answer 3 ..."></input>
+          <div>
+            <p>Title</p>
+            <input id="title" type="text" placeholder="Name of your IDEA..." required />
+          </div>
+          <div>
+            <p>Question 1:</p><p>"What problem does this IDEA solve? / What process will be enhanced by my IDEA?"</p>
+            <textarea
+              id="question1"
+              type="text"
+              placeholder="Answer 1 ..."
+              required
+              rows="4"
+            />
+          </div>
+          <div>
+            <p>Question 2:</p><p> "How my IDEA will improve the current process or setup a new process?"</p>
+            <textarea
+              id="question2"
+              type="text"
+              placeholder="Answer 2 ..."
+              required
+              rows="4"
+            />
+          </div>
+          <div>
+            <p>Question 3:</p>
+            <p>"What part of the current process is not optimal (optional)"</p>
+            <textarea id="question3" type="text" placeholder="Answer 3 ..." rows="4" />
+          </div>
         </IdeaQuestions>
-      </IdeaWrapper>
-      <IdeaDiv>
         {/* Save inside of context on click */}
-        <SubmitButton onClick={(e) => handleOnSubmit(e)}>Submit</SubmitButton>
-      </IdeaDiv>
-    </div>
+        <TopBtn action={(e) => handleOnSubmit(e)} text="Submit" width="full" />
+      </IdeaWrapper>
   );
 };
 export default NewIdea;
-
-const IdeaWrapper = styled.div`
-  display: flex;
-  max-height: 100vh;
-  min-width: 100vw;
-  flex-direction: column;
-
-  align-items: left;
-`;
-const IdeaTitle = styled.h1`
-  margin: 20px;
-`;
-
-const IdeaQuestions = styled.form`
-  padding: 10px;
-  justify-content: left;
-
-  input {
-    margin: 10px;
-    width: 80%;
-  }
-`;
-
-const IdeaSwipeLeft = styled.h3`
-  color: green;
-  font-weight: 200;
-  margin-top: 20px;
-`;
-
-const IdeaSwipeRight = styled.h3`
-  color: red;
-  font-weight: 200;
-  margin-top: 20px;
-`;
-
-const IdeaDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const SubmitButton = styled.button`
-  width: 100px;
-  height: 30px;
-  background-color: red;
-  color: white;
-  border-radius: 20px;
-  margin-top: 20px;
-`;
