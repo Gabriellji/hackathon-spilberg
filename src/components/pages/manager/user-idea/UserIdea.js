@@ -18,7 +18,6 @@ const StyledUserIdea = styled.div`
 
   @media (min-width: 376px){
   &:hover {
-    transform: scale(1.05);
     background-color: ${theme.color.yellow};
   }
 }

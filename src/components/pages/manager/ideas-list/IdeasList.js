@@ -12,7 +12,7 @@ const StyledIdeasList = styled.div`
   @media (min-width: 376px) {
     display: grid;
     gap: 16px;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(450px, 460px));
   }
 `;
 
