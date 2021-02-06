@@ -1,13 +1,19 @@
-import UserList from "./wall/user-list/UserList";
-
-import { Switch, Route } from 'react';
+import { Switch, Route } from "react-router-dom";
+import Navbar from "./navigation/NavBar";
 import IdeasList from "./wall/ideas-list/IdeasList";
+import FavoriteList from "./wall/favorite-ideas/FavoriteList";
 
-const Manager = () => (
+const Manager = () => {
+  return (
     <>
-    <h1>Im manager hohohoho</h1>
-    <IdeasList/>
+      <h1>Im manager hohohoho</h1>
+      <Navbar />
+      <Switch>
+        <Route exact path="/manager" component={IdeasList} />
+        <Route path="/manager/favorites" component={FavoriteList} />
+      </Switch>
     </>
-)
+  );
+};
 
 export default Manager;
