@@ -11,7 +11,7 @@ const SearchPanel = ({ onClick, value, onChange }) => {
           placeholder="Employee name ..."
           value={value}
         />
-        <button>Search</button>
+        <button onClick={(e) => onClick(e)}>Search</button>
       </div>
     </div>
   );
