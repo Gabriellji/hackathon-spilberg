@@ -1,13 +1,12 @@
 import React, { useContext } from "react";
-import { user } from "../../../../../data/data";
 import { ManagerContext } from "../../context/ContextProvider";
 import UserIdea from "../user-idea/UserIdea";
 
 const IdeasList = () => {
-  const { likeHandler } = useContext(ManagerContext);
+  const { likeHandler, userList } = useContext(ManagerContext);
   return (
     <div>
-      {user.map((idea) => (
+      {userList.map((idea) => (
         <UserIdea
           onClick={likeHandler}
           key={idea.ideas[0].id}
