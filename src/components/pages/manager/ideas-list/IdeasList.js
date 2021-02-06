@@ -1,11 +1,25 @@
 import React, { useContext } from "react";
+import styled from 'styled-components';
 import { Context } from '../../../../context/Context';
 import UserIdea from "../user-idea/UserIdea";
+
+const StyledIdeasList = styled.div`
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @media (min-width: 376px) {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+`;
 
 const IdeasList = (props) => {
   const { likeHandler, userList } = useContext(Context);
   return (
-    <div>
+    <StyledIdeasList>
       {userList.map((idea) => (
         <UserIdea
         location={props.location.pathname}
@@ -22,7 +36,7 @@ const IdeasList = (props) => {
           type="list"
         />
       ))}
-    </div>
+    </StyledIdeasList>
   );
 };
 

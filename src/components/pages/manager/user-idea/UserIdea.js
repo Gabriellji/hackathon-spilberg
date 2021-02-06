@@ -8,13 +8,20 @@ import { GiPodiumThird } from "react-icons/gi";
 
 const StyledUserIdea = styled.div`
   padding: 8px;
-  margin: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
   border: 2px solid ${theme.color.orange};
   border-radius: 10px;
+  transition: all 500ms;
+
+  @media (min-width: 376px){
+  &:hover {
+    transform: scale(1.05);
+    background-color: ${theme.color.yellow};
+  }
+}
 `;
 
 const StyledUpvotes = styled.p`
