@@ -63,17 +63,17 @@ const NewIdea = () => {
   const [question2, setQuestion2] = useState([]);
   const [question3, setQuestion3] = useState([]);
   const [newIdeas, setNewIdeas] = useState({});
+  const [isAccepted, setIsAccepted] = useState(true)
 
   const context = useContext(Context);
-  console.log(context);
   //handle change function here
   const handleOnChange = e => {
     e.preventDefault();
+    setIsAccepted(true)
     e.target.id === "title" && setTitle(e.target.value);
     e.target.id === "question1" && setQuestion1(e.target.value);
     e.target.id === "question2" && setQuestion2(e.target.value);
     e.target.id === "question3" && setQuestion3(e.target.value);
-    console.log(e.target.value);
 
     setNewIdeas({
       id: uuidv /* uuidv */,
@@ -90,20 +90,27 @@ const NewIdea = () => {
     // context.pushNewIdeas(newIdeas);
   };
   const handleOnSubmit = e => {
+    const addToContext = () => {
+      console.log("ok");
+      let newUserList = context.userList;
+      newUserList[0].ideas = [...newUserList[0].ideas, newIdeas];
+      context.setUserList(newUserList);
+      setTitle("");
+      setQuestion1("");
+      setQuestion2("");
+      setQuestion3("");
+    };
     e.preventDefault();
-    let newUserList = context.userList;
-    newUserList[0].ideas = [...newUserList[0].ideas, newIdeas];
-    context.setUserList(newUserList);
-    setTitle("");
-    setQuestion1("");
-    setQuestion2("");
-    setQuestion3("");
+    context.scrollTop();
+    title.length > 0 && question1.length > 0 && question2.length > 0
+      ? addToContext()
+      : setIsAccepted(false);
   };
 
-  //   console.log(e.target.e);
   return (
     <IdeaWrapper>
       <IdeaTitle>Send an IDEA to your peers</IdeaTitle>
+      {!isAccepted && <p>Please compile the form correctly</p>}
       <IdeaQuestions onChange={e => handleOnChange(e)}>
         {" "}
         <div>
