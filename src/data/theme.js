@@ -1,5 +1,7 @@
 export const theme = {
-    navbar: {
-        height:"75px"
+    color: {
+        orange: "#e94e0f",
+        purple: "#870b58",
+        yellow: "#F8AD07"
     }
 }

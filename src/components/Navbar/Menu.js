@@ -2,12 +2,13 @@ import React, { useContext, useState } from "react";
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
+import { theme } from "../../data/theme"
 
 const StyledModal = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: lightgreen;
+  background: ${theme.color.yellow};
   height: 100vh;
   width: auto;
   text-align: left;
@@ -28,7 +29,7 @@ const StyledModal = styled.div`
     padding: 2rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
-    color: red;
+    color: ${theme.color.purple};
     text-decoration: none;
     transition: color 0.3s linear;
     
@@ -38,7 +39,7 @@ const StyledModal = styled.div`
     }
 
     &:hover {
-      color: purple;
+      color: ${theme.color.orange};
     }
   }
 `;

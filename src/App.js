@@ -1,15 +1,37 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import { Context } from "./context/Context";
+import styled from 'styled-components';
+import { theme } from "./data/theme";
+
+// Top Buttons and Burger Menu
+import TopBtn from "./components//Navbar//TopBtns"
 import Burger from "./components/Navbar/Burger";
-import Menu from "./components/Navbar/Menu";
-import Spacer from "./components/Navbar/Spacer";
+import Menu from "./components/Navbar/Menu"
+import Spacer from "./components/Navbar/Spacer"
+
+// Pages
 import Home from "./components/pages/Home";
 import IdeasList from "./components/pages/manager/ideas-list/IdeasList";
 import FavoriteList from "./components/pages/manager/favorite-ideas/FavoriteList";
 import NewIdea from "./components/pages/employee/NewIdea";
 import EmployeeWall from "./components/pages/employee/EmployeeWall";
 // import PeerIdea from "./components/pages/employee/PeerIdea";
+
+const StyledTopBtnsSection = styled.div`
+  width: 100vw;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+
+  @media (min-width: 376px) {
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+`;
 
 const App = () => {
   const context = useContext(Context);
@@ -18,8 +40,10 @@ const App = () => {
 
   return (
     <main>
-      <button onClick={() => context.setIsAdmin(false)}>Employee</button>
-      <button onClick={() => context.setIsAdmin(true)}>Manager</button>
+      <StyledTopBtnsSection>
+      <TopBtn action={() => context.setIsAdmin(false)} text="Employee" />
+      <TopBtn action={() => context.setIsAdmin(true)} text="Manager" />
+      </StyledTopBtnsSection>
       <Burger modalOpen={modalOpen} setModalOpen={setModalOpen} />
       <Menu modalOpen={modalOpen} setModalOpen={setModalOpen} />
       <Spacer />
