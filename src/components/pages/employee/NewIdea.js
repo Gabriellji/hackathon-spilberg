@@ -64,13 +64,13 @@ const NewIdea = () => {
   const [question2, setQuestion2] = useState([]);
   const [question3, setQuestion3] = useState([]);
   const [newIdeas, setNewIdeas] = useState({});
-  const [isAccepted, setIsAccepted] = useState(true)
+  const [isAccepted, setIsAccepted] = useState(true);
 
   const context = useContext(Context);
   //handle change function here
   const handleOnChange = e => {
     e.preventDefault();
-    setIsAccepted(true)
+    setIsAccepted(true);
     e.target.id === "title" && setTitle(e.target.value);
     e.target.id === "question1" && setQuestion1(e.target.value);
     e.target.id === "question2" && setQuestion2(e.target.value);
@@ -84,7 +84,8 @@ const NewIdea = () => {
 
       question3: question3,
 
-      totalDislikes:[], totalDislikes:[], totalDislikes:[], totalDislikes:[], totalDislikes:[], totalDislikes:[], totalLikes: [],
+      totalDislikes: [],
+      totalLikes: [],
       created: "22/01/2021",
     });
 

@@ -19,6 +19,7 @@ import NewIdea from "./components/pages/employee/NewIdea";
 import EmployeeWall from "./components/pages/employee/EmployeeWall";
 import EmployeeList from "./components/pages/manager/employee-list/EmployeeList";
 import MyIdeas from "./components/pages/employee/MyIdeas";
+import Swipe from './components/pages/employee/Swipe'
 // import PeerIdea from "./components/pages/employee/PeerIdea";
 
 const StyledTopBtnsSection = styled.div`
@@ -51,7 +52,7 @@ const App = props => {
       <Switch>
         <Route exact path="/" render={() => <Home {...props}/>} />
         <Route exact path="/user/wall" component={EmployeeWall} />
-        <Route exact path="/user/swipe" render={() => <Home />} />
+        <Route exact path="/user/swipe" component={Swipe} />
         <Route exact path="/user/myideas" component={MyIdeas} />
         <Route exact path="/user/newidea" component={NewIdea} />
         <Route
