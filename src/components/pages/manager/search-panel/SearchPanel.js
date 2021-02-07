@@ -2,7 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 import { theme } from "../../../../data/theme";
 
-import TopBtn from "../../../../components/Navbar/TopBtns"
+// import TopBtn from "../../../../components/Navbar/TopBtns"
 
 const StyledSearchPanel = styled.div`
   display: flex;
@@ -33,7 +33,7 @@ const SearchPanel = ({ onClick, value, onChange }) => (
       placeholder="Employee name ..."
       value={value}
     />
-    <TopBtn action={(e) => onClick(e)} text="Search" />
+    {/* <TopBtn action={(e) => onClick(e)} text="Search" /> */}
   </StyledSearchPanel>
 );
 

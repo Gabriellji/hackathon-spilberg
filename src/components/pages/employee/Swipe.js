@@ -1,6 +1,26 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Context } from "../../../context/Context";
 import UserIdea from "../manager/user-idea/UserIdea";
+import styled from "styled-components";
+import { theme } from "../../../data/theme";
+
+const StyledVoteTitle = styled.h1`
+  width: 100%;
+  text-align: center;
+`;
+
+const StyledVoteList = styled.div`
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @media (min-width: 376px) {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 460px));
+  }
+`;
 
 const Swipe = () => {
   const [refresh, setRefresh] = useState(false);
@@ -28,7 +48,7 @@ const Swipe = () => {
     const otherUsers = context.userList.filter(
       user => user.name !== "Naomi Carey"
     );
-    console.log(otherUsers);
+    // console.log(otherUsers);
     otherUsers.map(user => {
       user.ideas.map(idea => {
         let newNotFavorite = [];
@@ -41,7 +61,9 @@ const Swipe = () => {
     });
   }, [refresh]);
   return (
-    <div>
+    <>
+    <StyledVoteTitle>Vote IDEAs</StyledVoteTitle>
+    <StyledVoteList>
       {context.ideasToVote.map(
         idea =>
           idea.ideas.length > 0 && (
@@ -58,7 +80,8 @@ const Swipe = () => {
             />
           )
       )}
-    </div>
+    </StyledVoteList>
+    </>
   );
 };
 export default Swipe;
