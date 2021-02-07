@@ -22,7 +22,7 @@ const ideaSchema = new mongoose.Schema({
     type: String,
   },
   totalDislikes: ["Lolita", "Carlos", "Nina"],
-  totalLikes: ['Alfred', "Pedro", "Valentin", "Kristina", "Teiko"],
+  totalLikes: ['Alfred', "Pedro", "Valentin", "Kristina", "Teiko", "Kamillo", "Jane", "Yuriy", "Victoria"],
   created: { type: Date, default: Date.now },
 });
 

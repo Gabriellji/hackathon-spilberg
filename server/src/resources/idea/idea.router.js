@@ -51,8 +51,10 @@ router.post(
 
 
       // HARDCODED DATA !!!
-      idea.totalLikes.push("Alfred", "Pedro", "Valentin", "Kristina", "Teiko")
-      idea.totalDislikes.push("Lolita", "Carlos", "Nina")
+      idea["totalLikes"].push("Alfred", "Pedro", "Valentin", "Kristina", "Teiko")
+      idea["totalDislikes"].push("Lolita", "Carlos", "Nina")
+
+      await idea.save()
 
       const employee = await Employee.findOne({
         _id: req.user.id,
