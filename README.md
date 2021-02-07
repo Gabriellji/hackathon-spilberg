@@ -1,7 +1,7 @@
 # IDEAs
 ## “To win in the marketplace you must first win in the workplace”
 
-# Spilberg / SD Worx / WCS Hackaton Project: "IDEAs"
+# Spilberg / SD Worx / WCS Hackaton Project
 
 ![Javascript](https://aleen42.github.io/badges/src/javascript.svg)
 ![React](https://aleen42.github.io/badges/src/react.svg)
