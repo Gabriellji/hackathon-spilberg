@@ -8,6 +8,8 @@ const Provider = ({ children }) => {
   const newList = user;
   const [userList, setUserList] = useState(newList);
   const [state, setState] = useState("");
+  const [ideasToVote, setIdeasToVote] = useState([])
+  const [voted, setVoted]= useState([])
   const likeHandler = e => {
     let itemSelected = userList.find(user => user.id === e.target.id);
 
@@ -42,6 +44,9 @@ const Provider = ({ children }) => {
         userList,
         setUserList,
         trashHandler,
+        ideasToVote,
+        setIdeasToVote,
+        voted, setVoted
       }}
     >
       {children}

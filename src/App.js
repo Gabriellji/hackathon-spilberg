@@ -16,9 +16,10 @@ import Home from "./components/pages/Home";
 import IdeasList from "./components/pages/manager/ideas-list/IdeasList";
 import FavoriteList from "./components/pages/manager/favorite-ideas/FavoriteList";
 import NewIdea from "./components/pages/employee/NewIdea";
-import EmployeeWall from "./components/pages/employee/EmployeeWall";
+import Wall from "./components/pages/employee/Wall";
 import EmployeeList from "./components/pages/manager/employee-list/EmployeeList";
 import MyIdeas from "./components/pages/employee/MyIdeas";
+import Swipe from './components/pages/employee/Swipe'
 // import PeerIdea from "./components/pages/employee/PeerIdea";
 
 const StyledSuperText = styled.p`
@@ -65,9 +66,9 @@ const App = props => {
       <Menu modalOpen={modalOpen} setModalOpen={setModalOpen} />
       <Spacer />
       <Switch>
-        <Route exact path="/" render={() => <Home {...props} />} />
-        <Route exact path="/user/wall" component={EmployeeWall} />
-        <Route exact path="/user/swipe" render={() => <Home />} />
+        <Route exact path="/" render={() => <Home {...props}/>} />
+        <Route exact path="/user/wall" component={Wall} />
+        <Route exact path="/user/swipe" component={Swipe} />
         <Route exact path="/user/myideas" component={MyIdeas} />
         <Route exact path="/user/newidea" component={NewIdea} />
         <Route

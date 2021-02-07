@@ -1,10 +1,13 @@
-import styled from 'styled-components';
-import { theme } from '../../../../data/theme';
+import styled from "styled-components";
+import { theme } from "../../../../data/theme";
 import { FaRegHeart } from "react-icons/fa";
 import { FaTrashAlt } from "react-icons/fa";
 import { GiPodiumWinner } from "react-icons/gi";
 import { GiPodiumSecond } from "react-icons/gi";
 import { GiPodiumThird } from "react-icons/gi";
+import { FcNext } from "react-icons/fc";
+import { FaThumbsUp } from "react-icons/fa";
+import { FaThumbsDown } from "react-icons/fa";
 
 const StyledUserIdea = styled.div`
   padding: 8px;
@@ -16,11 +19,11 @@ const StyledUserIdea = styled.div`
   border-radius: 10px;
   transition: all 500ms;
 
-  @media (min-width: 376px){
-  &:hover {
-    background-color: ${theme.color.yellow};
+  @media (min-width: 376px) {
+    &:hover {
+      background-color: ${theme.color.yellow};
+    }
   }
-}
 `;
 
 const StyledUpvotes = styled.p`
@@ -83,21 +86,27 @@ const UserIdea = ({
   onClick,
   type,
   rank,
+  next,
+  vote,
 }) => {
   return (
     <StyledUserIdea>
-      <StyledUpvotes>{totalLikes} {totalLikes <= 1 ? "Like" : "Likes"}</StyledUpvotes>
+      {type !== "vote" && (
+        <StyledUpvotes>
+          {totalLikes} {totalLikes <= 1 ? "Like" : "Likes"}
+        </StyledUpvotes>
+      )}
       <StyledIdeaTitle type={type}>
         <h3>{title}</h3>
-        {type === "list" && (
-          <FaRegHeart id={id} onClick={e => onClick(e)} />
-        )}
+        {type === "list" && <FaRegHeart id={id} onClick={e => onClick(e)} />}
         {type === "favorite" && (
           <FaTrashAlt id={id} onClick={e => onClick(e)} />
         )}
-        {rank == 0 && <GiPodiumWinner />}
-        {rank == 1 && <GiPodiumSecond />}
-        {rank == 2 && <GiPodiumThird />}
+        {rank === 0 && <GiPodiumWinner />}
+        {rank === 1 && <GiPodiumSecond />}
+        {rank === 2 && <GiPodiumThird />}
+        {type === "up" && <FaThumbsUp />}
+        {type === "down" && <FaThumbsDown />}
       </StyledIdeaTitle>
       <StyledText>
         <p>Problem:</p>
@@ -111,9 +120,19 @@ const UserIdea = ({
         <p>Location of problem:</p>
         {question3}
       </StyledText>
-      <StyledTextLittle>
-        Submitted by {name} at {created}
-      </StyledTextLittle>
+      {type !== "vote" && (
+        <StyledTextLittle>
+          Submitted by {name} at {created}
+        </StyledTextLittle>
+      )}
+      {type === "vote" && (
+        <div>
+          <button id={id} onClick={vote}>upvote</button>
+          <button id={id} onClick={e => next(e)}>
+            next
+          </button>
+        </div>
+      )}
     </StyledUserIdea>
   );
 };
