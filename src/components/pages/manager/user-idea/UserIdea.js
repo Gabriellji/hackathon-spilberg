@@ -74,6 +74,51 @@ const StyledTextLittle = styled.p`
   text-align: right;
 `;
 
+const StyledBtnContainers = styled.div`
+  display: flex;
+  gap: 8px;
+`;
+
+const StyledUpVote = styled.button`
+    padding: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: ${theme.color.white};
+    border: 2px solid ${theme.color.green};
+    border-radius: 9999px;
+    background-color: ${theme.color.green};
+    cursor: pointer;
+    transition: all 500ms;
+    width: 100%;
+
+    &:hover {
+        background-color: ${theme.color.white};
+        color: ${theme.color.green};
+        border: 2px solid ${theme.color.green};
+        transform: scale(1.1);
+    }
+`;
+
+const StyledDownVote = styled.button`
+      padding: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: ${theme.color.white};
+    border: 2px solid ${theme.color.red};
+    border-radius: 9999px;
+    background-color: ${theme.color.red};
+    cursor: pointer;
+    transition: all 500ms;
+    width: 100%;
+
+    &:hover {
+        background-color: ${theme.color.white};
+        color: ${theme.color.red};
+        border: 2px solid ${theme.color.red};
+        transform: scale(1.1);
+    }
+`;
+
 const UserIdea = ({
   id,
   name,
@@ -126,12 +171,12 @@ const UserIdea = ({
         </StyledTextLittle>
       )}
       {type === "vote" && (
-        <div>
-          <button id={id} onClick={vote}>upvote</button>
-          <button id={id} onClick={e => next(e)}>
+        <StyledBtnContainers>
+          <StyledUpVote id={id} onClick={vote}>upvote</StyledUpVote>
+          <StyledDownVote id={id} onClick={e => next(e)}>
             next
-          </button>
-        </div>
+          </StyledDownVote>
+        </StyledBtnContainers>
       )}
     </StyledUserIdea>
   );
