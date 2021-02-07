@@ -54,6 +54,7 @@ const IdeaQuestions = styled.form`
       line-height: 32px;
       padding: 4px;
       resize: vertical;
+      background-color: ${theme.color.grey};
     }
   }
 `;
@@ -84,9 +85,14 @@ const NewIdea = () => {
 
       question3: question3,
 
+<<<<<<< HEAD
       totalDislikes: [],
       totalLikes: [],
       created: "22/01/2021",
+=======
+      totalDislikes:[], totalDislikes:[], totalDislikes:[], totalDislikes:[], totalDislikes:[], totalDislikes:[], totalLikes: [],
+      created: "06/02/2021",
+>>>>>>> b0c598c19f90341712a578bd406aaf9a600f26e1
     });
 
     // context.pushNewIdeas(newIdeas);
@@ -101,11 +107,12 @@ const NewIdea = () => {
       setQuestion1("");
       setQuestion2("");
       setQuestion3("");
+      alert("New Idea submitted, thank you!");
     };
     e.preventDefault();
     context.scrollTop();
     title.length > 0 && question1.length > 0 && question2.length > 0
-      ? addToContext()
+      ? addToContext() 
       : setIsAccepted(false);
   };
 

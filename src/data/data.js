@@ -238,44 +238,62 @@ export const user = [
 export const bestIdeas = [
   {
     id: uuidv4() /* uuidv */,
-    title: "Fresh pizza at work",
+    title: "Everyday pizza at work",
     question1:
       "is simply dummy text of the printing and typesetting industry. ",
     question2:
       "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     question3:
       " when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more ",
+<<<<<<< HEAD
       totalDislikes: ["naomi Carey"],
       totalLikes: ["Naomi Carey", "1", "naomi", "boss"],
     created: "22/01/2021",
+=======
+    totalDislikes: [],
+    totalLikes: ["lorem", "ipsum", "hello"],
+    created: "01/01/2021",
+>>>>>>> b0c598c19f90341712a578bd406aaf9a600f26e1
     name: "Naomi Carey",
   },
   {
     id: uuidv4() /* uuidv */,
-    title: "Fresh pizza at work",
+    title: "New laptops for everyone!",
     question1:
       "is simply dummy text of the printing and typesetting industry. ",
     question2:
       "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     question3:
       " when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more ",
+<<<<<<< HEAD
       totalDislikes: ["naomi Carey"],
       totalLikes: ["1", "naomi", "boss"],
     created: "22/01/2021",
+=======
+    totalDislikes: [],
+    totalLikes: ["ipsum", "hello"],
+    created: "15/01/2021",
+>>>>>>> b0c598c19f90341712a578bd406aaf9a600f26e1
     name: "Jane Doe",
   },
   {
     id: uuidv4() /* uuidv */,
-    title: "Fresh pizza at work",
+    title: "Remote working up to 60%",
     question1:
       "is simply dummy text of the printing and typesetting industry. ",
     question2:
       "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     question3:
       " when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more ",
+<<<<<<< HEAD
       totalDislikes: [],
       totalLikes: ["Naomi Carey", "1", "naomi", "boss"],
     created: "22/01/2021",
+=======
+    totalDislikes: [],
+    totalLikes: ["ipsum", "hello"],
+    created: "29/01/2021",
+>>>>>>> b0c598c19f90341712a578bd406aaf9a600f26e1
     name: "V",
   },
 ];
