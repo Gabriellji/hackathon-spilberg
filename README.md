@@ -3,7 +3,7 @@
 ![Javascript](https://aleen42.github.io/badges/src/javascript.svg)
 ![React](https://aleen42.github.io/badges/src/react.svg)
 ![Node](https://github.com/aleen42/badges/blob/master/src/node.svg)
-![MongoDB](https://img.shields.io/badge/MongoDB-db-blue)
+![MongoDB](https://img.shields.io/badge/db-MongoDB-blue)
 
 ## Made by Code Maniacs
 
