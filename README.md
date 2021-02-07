@@ -7,7 +7,7 @@
 
 - Naomi Carey https://github.com/naomi-carey
 - Jacopo Luri https://github.com/JacopoLuri
-- Teiko Mancini https://github.com/mancia93
+- Mancini https://github.com/mancia93
 - Habrykava Yauheniya https://github.com/Gabriellji
 
 > WebApp made in 48 hours
