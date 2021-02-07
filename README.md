@@ -64,8 +64,9 @@ Your managers will have a win win situation, with nice ideas at their disposal a
 - Context
 - uuidv4
 - Styled Components for CSS
+- Working Back-End made with node.js, express.js and a No-SQL databade made with MongoDB and Mongoose [back-end is not yet connected to the front-end]
 
 ## Documentation
 
 IDEAs can grow and scale based on customer needs, we are really proud to share our MVP for this project!
-<work in progress>
+Inside the conceptual map look for the "Improvements" section with some ideas on how to scale IDEAs to your costumers.
