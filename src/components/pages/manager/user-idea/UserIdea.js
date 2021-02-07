@@ -6,6 +6,8 @@ import { GiPodiumWinner } from "react-icons/gi";
 import { GiPodiumSecond } from "react-icons/gi";
 import { GiPodiumThird } from "react-icons/gi";
 import { FcNext } from "react-icons/fc";
+import {FaThumbsUp}  from "react-icons/fa";
+import {FaThumbsDown}  from "react-icons/fa";
 
 const StyledUserIdea = styled.div`
   padding: 8px;
@@ -99,9 +101,11 @@ const UserIdea = ({
         {type === "favorite" && (
           <FaTrashAlt id={id} onClick={e => onClick(e)} />
         )}
-        {rank == 0 && <GiPodiumWinner />}
-        {rank == 1 && <GiPodiumSecond />}
-        {rank == 2 && <GiPodiumThird />}
+        {rank === 0 && <GiPodiumWinner />}
+        {rank === 1 && <GiPodiumSecond />}
+        {rank === 2 && <GiPodiumThird />}
+        {type === "up" && <FaThumbsUp />}
+        {type === "down" && <FaThumbsDown />}
       </StyledIdeaTitle>
       <StyledText>
         <p>Problem:</p>
