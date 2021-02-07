@@ -66,15 +66,9 @@ const App = props => {
       <Menu modalOpen={modalOpen} setModalOpen={setModalOpen} />
       <Spacer />
       <Switch>
-<<<<<<< HEAD
         <Route exact path="/" render={() => <Home {...props}/>} />
         <Route exact path="/user/wall" component={Wall} />
         <Route exact path="/user/swipe" component={Swipe} />
-=======
-        <Route exact path="/" render={() => <Home {...props} />} />
-        <Route exact path="/user/wall" component={EmployeeWall} />
-        <Route exact path="/user/swipe" render={() => <Home />} />
->>>>>>> b0c598c19f90341712a578bd406aaf9a600f26e1
         <Route exact path="/user/myideas" component={MyIdeas} />
         <Route exact path="/user/newidea" component={NewIdea} />
         <Route

@@ -6,8 +6,8 @@ import { GiPodiumWinner } from "react-icons/gi";
 import { GiPodiumSecond } from "react-icons/gi";
 import { GiPodiumThird } from "react-icons/gi";
 import { FcNext } from "react-icons/fc";
-import {FaThumbsUp}  from "react-icons/fa";
-import {FaThumbsDown}  from "react-icons/fa";
+import { FaThumbsUp } from "react-icons/fa";
+import { FaThumbsDown } from "react-icons/fa";
 
 const StyledUserIdea = styled.div`
   padding: 8px;
@@ -86,7 +86,8 @@ const UserIdea = ({
   onClick,
   type,
   rank,
-  next
+  next,
+  vote,
 }) => {
   return (
     <StyledUserIdea>
@@ -126,8 +127,10 @@ const UserIdea = ({
       )}
       {type === "vote" && (
         <div>
-          <button id={id} >upvote</button>
-          <button id={id} onClick={e=>next(e)}>next</button>
+          <button id={id} onClick={vote}>upvote</button>
+          <button id={id} onClick={e => next(e)}>
+            next
+          </button>
         </div>
       )}
     </StyledUserIdea>

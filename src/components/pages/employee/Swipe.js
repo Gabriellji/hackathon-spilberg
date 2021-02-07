@@ -5,10 +5,25 @@ import UserIdea from "../manager/user-idea/UserIdea";
 const Swipe = () => {
   const [refresh, setRefresh] = useState(false);
   const context = useContext(Context);
+
   const next = e => {
-    /*   console.log(e.target.id)
-      context.ideasToVote.map(user=>user.ideas.map((idea,=>idea.id==e.target.id && users.ideas[index].upshift)) */
+      context.ideasToVote.map(user =>
+        user.ideas.map(
+          idea =>
+            idea.id === e.target.id && idea.totalDislikes.push("Naomi Carey")  
+      )
+    );
+    setRefresh(!refresh);
   };
+  const upvote = e => {
+    context.ideasToVote.map(user =>
+      user.ideas.map(
+        idea =>
+          idea.id === e.target.id && idea.totalLikes.push("Naomi Carey")  
+    )
+  );
+  setRefresh(!refresh);
+};
   useEffect(() => {
     const otherUsers = context.userList.filter(
       user => user.name !== "Naomi Carey"
@@ -39,6 +54,7 @@ const Swipe = () => {
               question3={idea.ideas[0].question3}
               type="vote"
               next={next}
+              vote={upvote}
             />
           )
       )}

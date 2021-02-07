@@ -85,14 +85,9 @@ const NewIdea = () => {
 
       question3: question3,
 
-<<<<<<< HEAD
       totalDislikes: [],
       totalLikes: [],
       created: "22/01/2021",
-=======
-      totalDislikes:[], totalDislikes:[], totalDislikes:[], totalDislikes:[], totalDislikes:[], totalDislikes:[], totalLikes: [],
-      created: "06/02/2021",
->>>>>>> b0c598c19f90341712a578bd406aaf9a600f26e1
     });
 
     // context.pushNewIdeas(newIdeas);
