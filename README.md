@@ -3,7 +3,9 @@
 ![Javascript](https://aleen42.github.io/badges/src/javascript.svg)
 ![React](https://aleen42.github.io/badges/src/react.svg)
 ![Node](https://github.com/aleen42/badges/blob/master/src/node.svg)
+![Express](https://img.shields.io/badge/JS-Express-red)
 ![MongoDB](https://img.shields.io/badge/db-MongoDB-blue)
+![CSS](https://img.shields.io/badge/CSS-Styled%20Components-green)
 
 ## Made by Code Maniacs
 
