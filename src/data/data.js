@@ -15,7 +15,7 @@ export const user = [
     username: "user" /* string */,
     password: "user" /* string */,
     name: "Naomi Carey" /* string */,
-    position: "worker" /* string */,
+    position: "Senior Accounting" /* string */,
     ideas: [
       /* put array of ideas here */
       {
@@ -64,12 +64,12 @@ export const user = [
     username: "Peppe" /* string */,
     password: "user" /* string */,
     name: "Anna Salo" /* string */,
-    position: "developer" /* string */,
+    position: "FE Developer" /* string */,
     ideas: [
       /* put array of ideas here */
       {
         id: uuidv4(),
-        title: "Cofee machine at office",
+        title: "Coffee machine at office",
         question1:
           "is simply dummy text of the printing and typesetting industry. ",
         question2:
@@ -86,8 +86,8 @@ export const user = [
     id: uuidv4() /* uuidv */,
     username: "Bear" /* string */,
     password: "user" /* string */,
-    name: "Yahoo Karlos" /* string */,
-    position: "cleaner" /* string */,
+    name: "John Kennen" /* string */,
+    position: "Mechanic Lead" /* string */,
     ideas: [
       /* put array of ideas here */
       {
@@ -109,8 +109,8 @@ export const user = [
     id: uuidv4() /* uuidv */,
     username: "Bonito" /* string */,
     password: "user" /* string */,
-    name: "Chowauwa" /* string */,
-    position: "cooker" /* string */,
+    name: "Gary from 2nd Floor" /* string */,
+    position: "IDEAs giver" /* string */,
     ideas: [
       /* put array of ideas here */
       {
@@ -132,8 +132,8 @@ export const user = [
     id: uuidv4() /* uuidv */,
     username: "Mary" /* string */,
     password: "user" /* string */,
-    name: "Marry Poppins" /* string */,
-    position: "model" /* string */,
+    name: "Karen Poppins" /* string */,
+    position: "Head of Accounting" /* string */,
     ideas: [
       /* put array of ideas here */
       {
@@ -155,8 +155,8 @@ export const user = [
     id: uuidv4() /* uuidv */,
     username: "Silvester" /* string */,
     password: "user" /* string */,
-    name: "Silvester Stallone" /* string */,
-    position: "writer" /* string */,
+    name: "Orlando Green" /* string */,
+    position: "Product Manager" /* string */,
     ideas: [
       /* put array of ideas here */
       {

@@ -55,8 +55,8 @@ const App = props => {
   return (
     <>
       {context.admin
-        ? <StyledSuperText>Manager User</StyledSuperText>
-        : <StyledSuperText>Employee User</StyledSuperText>
+        ? <StyledSuperText>Mario Rossi (Manager)</StyledSuperText>
+        : <StyledSuperText>Naomi Carey (Employee)</StyledSuperText>
       }
       <StyledTopBtnsSection>
         <Link to="/"><TopBtn action={() => context.setIsAdmin(true)} text="Manager" /></Link>

@@ -2,7 +2,6 @@ import React, { useState, useContext, useEffect } from "react";
 import { Context } from "../../../context/Context";
 import UserIdea from "../manager/user-idea/UserIdea";
 import styled from "styled-components";
-import { theme } from "../../../data/theme";
 
 const StyledVoteTitle = styled.h1`
   width: 100%;
