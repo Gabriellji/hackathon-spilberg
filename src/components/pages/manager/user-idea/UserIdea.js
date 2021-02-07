@@ -150,8 +150,8 @@ const UserIdea = ({
         {rank === 0 && <GiPodiumWinner />}
         {rank === 1 && <GiPodiumSecond />}
         {rank === 2 && <GiPodiumThird />}
-        {type === "up" && <FaThumbsUp />}
-        {type === "down" && <FaThumbsDown />}
+        {/* {type === "up" && <FaThumbsUp />}
+        {type === "down" && <FaThumbsDown />} */}
       </StyledIdeaTitle>
       <StyledText>
         <p>Problem:</p>
